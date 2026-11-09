@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-    <!-- Strict TLS: Block cleartext HTTP traffic -->
-    <base-config cleartextTrafficPermitted="false">
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!-- Allow HTTPS and self-hosted HTTP webhooks -->
+    <base-config cleartextTrafficPermitted="true" tools:ignore="InsecureBaseConfiguration">
         <trust-anchors>
             <certificates src="system" />
         </trust-anchors>

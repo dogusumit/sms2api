@@ -152,10 +152,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         if (nextState) {
             SmsForwarderService.start(context)
-            _uiState.update { it.copy(snackbarMessage = "SMS2API service started in foreground") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_service_started)) }
         } else {
             SmsForwarderService.stop(context)
-            _uiState.update { it.copy(snackbarMessage = "SMS2API service stopped") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_service_stopped)) }
         }
     }
 
@@ -166,14 +166,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun flushQueue(context: Context) {
         viewModelScope.launch {
             SmsForwardWorker.enqueue(context)
-            _uiState.update { it.copy(snackbarMessage = "Triggered queue delivery") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_queue_triggered)) }
         }
     }
 
     fun retryRecord(messageId: String) {
         viewModelScope.launch {
             val success = repository.dispatchSingleRecord(messageId)
-            val msg = if (success) "Delivered successfully" else "Delivery failed, remaining queued"
+            val msg = if (success) {
+                app.getString(com.sms2api.app.R.string.snack_delivered_success)
+            } else {
+                app.getString(com.sms2api.app.R.string.snack_delivered_failed)
+            }
             _uiState.update { it.copy(snackbarMessage = msg) }
         }
     }
@@ -183,7 +187,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val count = repository.retryAllFailed()
             app.setupPeriodicSyncWorker()
             SmsForwardWorker.enqueue(app)
-            _uiState.update { it.copy(snackbarMessage = "Queued $count failed message(s) for retry") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_retry_failed_queued, count)) }
         }
     }
 
@@ -191,21 +195,21 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             repository.resetAllToPending()
             SmsForwardWorker.enqueue(context)
-            _uiState.update { it.copy(snackbarMessage = "Queued all records for resend") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_queued_all_resend)) }
         }
     }
 
     fun clearSuccessful() {
         viewModelScope.launch {
             repository.clearSuccessful()
-            _uiState.update { it.copy(snackbarMessage = "Cleared all delivered records") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_cleared_delivered)) }
         }
     }
 
     fun clearAll() {
         viewModelScope.launch {
             repository.clearAll()
-            _uiState.update { it.copy(snackbarMessage = "Cleared all local records") }
+            _uiState.update { it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.snack_cleared_all)) }
         }
     }
 
@@ -216,19 +220,25 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             _uiState.update { it.copy(isHistoricalImporting = false) }
 
             if (result.success) {
-                val summary = "Scanned: ${result.totalScanned} | Matched: ${result.matched} | Queued: ${result.newlyQueued}"
+                val summary = app.getString(
+                    com.sms2api.app.R.string.snack_historical_completed,
+                    result.totalScanned,
+                    result.matched,
+                    result.newlyQueued
+                )
                 _uiState.update {
                     it.copy(
                         importResultSummary = summary,
-                        snackbarMessage = "Historical import completed: $summary"
+                        snackbarMessage = summary
                     )
                 }
                 if (result.newlyQueued > 0) {
                     SmsForwardWorker.enqueue(context)
                 }
             } else {
+                val err = app.getString(com.sms2api.app.R.string.snack_historical_failed, result.errorMessage ?: "")
                 _uiState.update {
-                    it.copy(snackbarMessage = "Failed to import inbox: ${result.errorMessage}")
+                    it.copy(snackbarMessage = err)
                 }
             }
         }
@@ -239,9 +249,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             _uiState.update { it.copy(isTestingConnection = true, connectionTestResult = null) }
             val result = apiClient.testConnection()
             val text = if (result.isSuccess) {
-                "Success! Endpoint reachable with HTTP ${result.httpCode ?: 200}"
+                app.getString(com.sms2api.app.R.string.conn_test_success, result.httpCode ?: 200)
             } else {
-                "Failed: ${result.errorMessage ?: "HTTP ${result.httpCode}"}"
+                app.getString(com.sms2api.app.R.string.conn_test_failed, result.errorMessage ?: "HTTP ${result.httpCode}")
             }
             _uiState.update {
                 it.copy(
@@ -345,7 +355,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
         if (trimmedEndpoint.isNotEmpty() && !UrlValidator.isValidUrl(trimmedEndpoint)) {
             _uiState.update {
-                it.copy(snackbarMessage = "Geçersiz Webhook URL formatı! (http:// veya https:// ile başlamalıdır)")
+                it.copy(snackbarMessage = app.getString(com.sms2api.app.R.string.err_invalid_url_format))
             }
             return
         }
@@ -367,7 +377,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _uiState.update {
             it.copy(
                 customHeaders = if (validHeaders.isEmpty()) listOf(HeaderItem("X-API-Key", "")) else validHeaders,
-                snackbarMessage = "Target & Auth saved successfully"
+                snackbarMessage = app.getString(com.sms2api.app.R.string.snack_config_saved)
             )
         }
     }

@@ -144,4 +144,8 @@
     <string name="snack_config_saved">Hedef ve kimlik doğrulama ayarları kaydedildi</string>
     <string name="conn_test_success">Başarılı! Uç noktaya erişildi (HTTP %1$d)</string>
     <string name="conn_test_failed">Başarısız: %1$s</string>
+    <string name="err_configure_url_first">Lütfen önce Ayarlar ekranından geçerli bir Webhook URL tanımlayın!</string>
+    <string name="err_permission_receive_sms">SMS alma izni gerekli. Lütfen ayarlardan izin verin.</string>
+    <string name="err_permission_read_sms">Geçmiş SMS\'ler için SMS okuma izni gerekli (Lütfen ayarlardan verin).</string>
+    <string name="err_invalid_url_format">Geçersiz Webhook URL formatı! (http:// veya https:// ile başlamalıdır)</string>
 </resources>

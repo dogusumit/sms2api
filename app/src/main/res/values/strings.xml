@@ -145,4 +145,8 @@
     <string name="snack_config_saved">Target &amp; Auth saved successfully</string>
     <string name="conn_test_success">Success! Endpoint reachable with HTTP %1$d</string>
     <string name="conn_test_failed">Failed: %1$s</string>
+    <string name="err_configure_url_first" tools:ignore="MissingTranslation">Please configure a valid Webhook URL in Settings first!</string>
+    <string name="err_permission_receive_sms" tools:ignore="MissingTranslation">SMS receive permission is required. Please grant it in settings.</string>
+    <string name="err_permission_read_sms" tools:ignore="MissingTranslation">SMS read permission is required to import past SMS messages.</string>
+    <string name="err_invalid_url_format" tools:ignore="MissingTranslation">Invalid Webhook URL format! (Must start with http:// or https://)</string>
 </resources>

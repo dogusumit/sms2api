@@ -45,11 +45,12 @@ fun LogsScreen(
     uiState: MainUiState,
     onNavigateToSettings: () -> Unit
 ) {
+    val context = LocalContext.current
     var recordToConfirmRetry by remember { mutableStateOf<SmsRecord?>(null) }
 
     fun triggerResendWithUrlCheck(record: SmsRecord) {
         if (!UrlValidator.isValidUrl(uiState.apiEndpoint)) {
-            viewModel.showSnackbarMessage("Lütfen önce Ayarlar ekranından geçerli bir Webhook URL tanımlayın!")
+            viewModel.showSnackbarMessage(context.getString(R.string.err_configure_url_first))
             onNavigateToSettings()
         } else {
             recordToConfirmRetry = record

@@ -56,7 +56,7 @@ fun DashboardScreen(
 
     fun triggerActionWithUrlCheck(action: DashboardAction) {
         if (!UrlValidator.isValidUrl(uiState.apiEndpoint)) {
-            viewModel.showSnackbarMessage("Lütfen önce Ayarlar ekranından geçerli bir Webhook URL tanımlayın!")
+            viewModel.showSnackbarMessage(context.getString(R.string.err_configure_url_first))
             onNavigateToSettings()
         } else {
             activeAction = action
@@ -76,12 +76,12 @@ fun DashboardScreen(
             onToggleService = {
                 if (!uiState.isServiceRunning) {
                     if (!UrlValidator.isValidUrl(uiState.apiEndpoint)) {
-                        viewModel.showSnackbarMessage("Lütfen önce Ayarlar ekranından geçerli bir Webhook URL tanımlayın!")
+                        viewModel.showSnackbarMessage(context.getString(R.string.err_configure_url_first))
                         onNavigateToSettings()
                     } else if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECEIVE_SMS) == PackageManager.PERMISSION_GRANTED) {
                         viewModel.toggleService(context)
                     } else {
-                        viewModel.showSnackbarMessage("SMS alma izni gerekli. Lütfen ayarlardan izin verin.")
+                        viewModel.showSnackbarMessage(context.getString(R.string.err_permission_receive_sms))
                     }
                 } else {
                     viewModel.toggleService(context)
@@ -310,7 +310,7 @@ fun DashboardScreen(
                     if (ContextCompat.checkSelfPermission(context, Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED) {
                         viewModel.importHistoricalMessages(context)
                     } else {
-                        viewModel.showSnackbarMessage("Geçmiş SMS'ler için SMS okuma izni gerekli (Lütfen ayarlardan verin).")
+                        viewModel.showSnackbarMessage(context.getString(R.string.err_permission_read_sms))
                     }
                 }
             }

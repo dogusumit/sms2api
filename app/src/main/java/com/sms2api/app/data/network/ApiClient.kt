@@ -2,6 +2,7 @@ package com.sms2api.app.data.network
 
 import android.util.Base64
 import com.google.gson.Gson
+import com.sms2api.app.BuildConfig
 import com.sms2api.app.data.local.EncryptedPreferencesManager
 import com.sms2api.app.data.model.AuthType
 import com.sms2api.app.data.model.SmsPayload
@@ -27,16 +28,20 @@ class ApiClient(private val preferencesManager: EncryptedPreferencesManager) {
     private val jsonMediaType = "application/json; charset=utf-8".toMediaType()
 
     private val client: OkHttpClient by lazy {
-        val logging = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
-        }
-        OkHttpClient.Builder()
+        val builder = OkHttpClient.Builder()
             .connectTimeout(15, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
-            .addInterceptor(logging)
             .retryOnConnectionFailure(false)
-            .build()
+
+        if (BuildConfig.DEBUG) {
+            val logging = HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BODY
+            }
+            builder.addInterceptor(logging)
+        }
+
+        builder.build()
     }
 
     suspend fun sendPayload(payload: SmsPayload): NetworkResult = withContext(Dispatchers.IO) {
