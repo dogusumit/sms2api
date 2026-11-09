@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">Layanan Penerus SMS</string>
+    <string name="channel_desc">Layanan latar belakang persisten untuk menangkap dan meneruskan SMS ke REST API</string>
+    <string name="service_active_title">SMS2API Aktif</string>
+    <string name="service_active_desc">Memantau SMS masuk dan meneruskan ke API</string>
+    <string name="service_active_status">Layanan Aktif</string>
+    <string name="service_stopped_status">Layanan Berhenti</string>
+    <string name="service_active_sub">Pengambilan SMS latar belakang sedang berjalan</string>
+    <string name="service_stopped_sub">Aktifkan untuk pengambilan otomatis di latar belakang</string>
+    <string name="stop_service">Hentikan Layanan</string>
+    <string name="service_messages_queued">%1$s • %2$d pesan dalam antrean</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dasbor</string>
+    <string name="nav_logs">Log &amp; Antrean</string>
+    <string name="nav_logs_short">Log</string>
+    <string name="nav_settings">Konfigurasi</string>
+    <string name="nav_settings_short">Pengaturan</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">Metrik Antrean &amp; Pengiriman</string>
+    <string name="metric_matched">Cocok dengan Filter</string>
+    <string name="metric_skipped">Tidak Cocok dengan Filter</string>
+    <string name="metric_delivered">Terkirim</string>
+    <string name="metric_pending">Menunggu</string>
+    <string name="metric_failed">Gagal</string>
+    <string name="metric_total">Total Ditangkap</string>
+    <string name="section_actions">Tindakan Operasional</string>
+    <string name="action_sync_all_past">Sinkronkan Semua SMS Lama (Impor Massal)</string>
+    <string name="action_scanning_inbox">Memindai pesan kotak masuk…</string>
+    <string name="action_resend_all">Kirim Ulang Semua</string>
+    <string name="action_send_pending">Kirim yang Tertunda</string>
+    <string name="action_send_failed">Kirim Ulang yang Gagal</string>
+    <string name="action_test_api">Uji API</string>
+    <string name="action_testing">Menguji…</string>
+    <string name="battery_opt_title">Optimalisasi Baterai Diaktifkan</string>
+    <string name="battery_opt_desc">Izinkan eksekusi latar belakang agar penerusan SMS tidak terputus.</string>
+    <string name="battery_opt_allow">Izinkan</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">Ya</string>
+    <string name="dialog_btn_no">Tidak</string>
+    <string name="dialog_sync_title">Sinkronkan Semua SMS Lama</string>
+    <string name="dialog_sync_desc">Ini akan memindai kotak masuk perangkat Anda dan mengimpor semua SMS lama yang sesuai dengan filter ke dalam antrean.</string>
+    <string name="dialog_resend_all_title">Kirim Ulang Semua Catatan</string>
+    <string name="dialog_resend_all_desc">Ini akan mengatur ulang semua catatan SMS (terkirim, tertunda, dan gagal) kembali ke status tertunda untuk dikirim ulang.</string>
+    <string name="dialog_send_pending_title">Kirim Antrean Tertunda</string>
+    <string name="dialog_send_pending_desc">Ini akan segera memicu pekerja latar belakang untuk mengirimkan semua SMS yang tertunda dalam antrean.</string>
+    <string name="dialog_send_failed_title">Kirim Pesan Gagal</string>
+    <string name="dialog_send_failed_desc">Ini akan mengatur ulang semua upaya pengiriman yang gagal kembali ke tertunda dan menjadwalkan ulang.</string>
+    <string name="dialog_test_api_title">Uji Koneksi API</string>
+    <string name="dialog_test_api_desc">Ini akan mengirim permintaan ping uji ke URL webhook yang dikonfigurasi untuk memverifikasi konektivitas.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">Cari pengirim, isi pesan, atau hash…</string>
+    <string name="clear">Hapus</string>
+    <string name="filter_all">Semua (%1$d)</string>
+    <string name="filter_matched">Cocok (%1$d)</string>
+    <string name="filter_skipped">Dilewati (%1$d)</string>
+    <string name="filter_success">Berhasil (%1$d)</string>
+    <string name="filter_pending">Tertunda (%1$d)</string>
+    <string name="filter_failed">Gagal (%1$d)</string>
+    <string name="empty_logs_filtered">Tidak ada catatan SMS yang cocok dengan filter Anda.</string>
+    <string name="empty_logs_initial">Belum ada pesan SMS yang ditangkap.</string>
+    <string name="dialog_send_record_title">Kirim ke API</string>
+    <string name="dialog_send_record_desc">Apakah Anda yakin ingin mengirim pesan ini (dari %1$s) ke API?</string>
+    <string name="badge_skipped">DILEWATI</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">Terkirim: %1$d kali</string>
+    <string name="action_send_to_api">Kirim ke API</string>
+    <string name="copy_message_id">Salin ID</string>
+    <string name="toast_copied">%1$s disalin ke papan klip</string>
+    <string name="label_message_id">ID Pesan</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">Penerus SMS2API</string>
+    <string name="about_app_desc">Jembatan otomatis SMS ke REST API. Menangkap pesan masuk secara instan dan meneruskannya dengan aman.</string>
+    <string name="section_target_auth">Target &amp; Autentikasi</string>
+    <string name="field_webhook_url">URL Titik Akhir Webhook</string>
+    <string name="field_webhook_placeholder">https://api.domainanda.com/v1/sms/webhook</string>
+    <string name="field_auth_method">Metode Autentikasi</string>
+    <string name="auth_none">Tidak Ada</string>
+    <string name="auth_basic">Basic Auth</string>
+    <string name="auth_bearer">Bearer Token</string>
+    <string name="auth_custom">Header Kustom (Custom Header)</string>
+    <string name="btn_change">Ubah</string>
+    <string name="btn_test_connection">Uji Koneksi</string>
+    <string name="btn_save_config">Simpan Konfigurasi</string>
+    <string name="section_filtering_rules">Aturan Penyaringan SMS</string>
+    <string name="field_sender_filter">Filter Pengirim</string>
+    <string name="all_senders_default">Semua Pengirim (Default)</string>
+    <string name="dialog_select_senders">Pilih Pengirim</string>
+    <string name="search_senders_placeholder">Cari atau ketik pengirim…</string>
+    <string name="action_add_sender">Tambahkan pengirim \"%1$s\"</string>
+    <string name="btn_done">Selesai</string>
+    <string name="field_keyword_filter">Filter Kata Kunci (Opsional)</string>
+    <string name="keyword_placeholder">Biarkan kosong untuk semua teks</string>
+    <string name="section_reliability">Keandalan &amp; Bertahan di OS</string>
+    <string name="setting_autostart_title">Mulai Otomatis Saat Boot</string>
+    <string name="setting_autostart_desc">Memulai ulang layanan setelah perangkat dihidupkan ulang.</string>
+    <string name="setting_sync_title">Sinkronisasi WorkManager 15 Menit</string>
+    <string name="setting_sync_desc">Pekerja latar cadangan berkala untuk catatan yang tertunda.</string>
+    <string name="setting_battery_title">Optimalisasi Baterai</string>
+    <string name="battery_exempted">Dikecualikan (Optimal)</string>
+    <string name="battery_not_exempted">Tidak dikecualikan (Mungkin dijeda)</string>
+    <string name="btn_configure">Konfigurasikan</string>
+    <string name="battery_completed">Selesai</string>
+    <string name="section_service_status">Status Layanan</string>
+    <string name="section_language">Bahasa Aplikasi / Language</string>
+    <string name="language_selector_title">Bahasa</string>
+    <string name="language_selector_sub">Pilih bahasa tampilan untuk aplikasi</string>
+    <string name="system_default_language">Default Sistem</string>
+    <string name="dialog_tls_title">Keamanan &amp; Enkripsi Webhook</string>
+    <string name="dialog_tls_desc">• Wajib menggunakan TLS 1.2+ untuk endpoint HTTPS.\n• Kredensial dan token dienkripsi secara aman melalui Android Keystore (AES256-GCM).</string>
+    <string name="btn_got_it">Mengerti</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="dialog_auth_basic_title">Konfigurasi Basic Auth</string>
+    <string name="dialog_auth_bearer_title">Konfigurasi Bearer Token</string>
+    <string name="dialog_auth_custom_title">Konfigurasi Header Kustom</string>
+    <string name="dialog_auth_default_title">Konfigurasi Autentikasi</string>
+    <string name="field_username">Nama Pengguna</string>
+    <string name="field_password">Kata Sandi</string>
+    <string name="field_leave_blank_clear">Biarkan kosong untuk menghapus</string>
+    <string name="field_bearer_token">Bearer Token</string>
+    <string name="label_custom_headers_array">Daftar Header Kustom:</string>
+    <string name="btn_add_header">Tambah Header</string>
+    <string name="auth_no_config_needed">Tidak diperlukan konfigurasi tambahan untuk jenis autentikasi ini.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">Layanan SMS2API dimulai di latar depan</string>
+    <string name="snack_service_stopped">Layanan SMS2API dihentikan</string>
+    <string name="snack_queue_triggered">Pengiriman antrean dipicu</string>
+    <string name="snack_delivered_success">Berhasil terkirim</string>
+    <string name="snack_delivered_failed">Pengiriman gagal, tetap dalam antrean</string>
+    <string name="snack_retry_failed_queued">%1$d pesan gagal dimasukkan ke antrean coba ulang</string>
+    <string name="snack_queued_all_resend">Semua catatan dimasukkan ke antrean untuk dikirim ulang</string>
+    <string name="snack_cleared_delivered">Semua catatan terkirim telah dibersihkan</string>
+    <string name="snack_cleared_all">Semua catatan lokal telah dibersihkan</string>
+    <string name="snack_historical_completed">Impor selesai: Dipindai: %1$d | Cocok: %2$d | Masuk antrean: %3$d</string>
+    <string name="snack_historical_failed">Gagal mengimpor kotak masuk: %1$s</string>
+    <string name="snack_config_saved">Konfigurasi target dan autentikasi berhasil disimpan</string>
+    <string name="conn_test_success">Berhasil! Endpoint dapat dijangkau (HTTP %1$d)</string>
+    <string name="conn_test_failed">Gagal: %1$s</string>
+</resources>

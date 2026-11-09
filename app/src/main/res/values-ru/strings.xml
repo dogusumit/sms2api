@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">Служба пересылки SMS</string>
+    <string name="channel_desc">Постоянная фоновая служба для перехвата и пересылки SMS-сообщений в REST API</string>
+    <string name="service_active_title">SMS2API Активен</string>
+    <string name="service_active_desc">Мониторинг входящих SMS и пересылка в API</string>
+    <string name="service_active_status">Служба запущена</string>
+    <string name="service_stopped_status">Служба остановлена</string>
+    <string name="service_active_sub">Фоновый перехват SMS включен</string>
+    <string name="service_stopped_sub">Включите для автоматического перехвата в фоновом режиме</string>
+    <string name="stop_service">Остановить службу</string>
+    <string name="service_messages_queued">%1$s • %2$d сообщений в очереди</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Панель управления</string>
+    <string name="nav_logs">Журнал и очередь</string>
+    <string name="nav_logs_short">Журнал</string>
+    <string name="nav_settings">Конфигурация</string>
+    <string name="nav_settings_short">Настройки</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">Метрики очереди и доставки</string>
+    <string name="metric_matched">Совпадает с фильтром</string>
+    <string name="metric_skipped">Пропущено фильтром</string>
+    <string name="metric_delivered">Доставлено</string>
+    <string name="metric_pending">В очереди</string>
+    <string name="metric_failed">Ошибка</string>
+    <string name="metric_total">Всего перехвачено</string>
+    <string name="section_actions">Оперативные действия</string>
+    <string name="action_sync_all_past">Синхронизировать прошлые SMS (Массовый импорт)</string>
+    <string name="action_scanning_inbox">Сканирование входящих сообщений…</string>
+    <string name="action_resend_all">Отправить все повторно</string>
+    <string name="action_send_pending">Отправить ожидающие</string>
+    <string name="action_send_failed">Повторить неудачные</string>
+    <string name="action_test_api">Тестировать API</string>
+    <string name="action_testing">Тестирование…</string>
+    <string name="battery_opt_title">Оптимизация батареи включена</string>
+    <string name="battery_opt_desc">Разрешите фоновую работу для бесперебойной пересылки SMS.</string>
+    <string name="battery_opt_allow">Разрешить</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">Да</string>
+    <string name="dialog_btn_no">Нет</string>
+    <string name="dialog_sync_title">Синхронизировать все прошлые SMS</string>
+    <string name="dialog_sync_desc">Будет выполнено сканирование входящих SMS на устройстве и массовый импорт в очередь всех сообщений, подходящих под фильтры.</string>
+    <string name="dialog_resend_all_title">Повторно отправить все записи</string>
+    <string name="dialog_resend_all_desc">Все записи (доставленные, ожидающие и с ошибками) будут переведены в статус ожидания для повторной отправки.</string>
+    <string name="dialog_send_pending_title">Отправить очередь ожидания</string>
+    <string name="dialog_send_pending_desc">Немедленно запустит фоновый процесс для отправки всех сообщений из очереди ожидания.</string>
+    <string name="dialog_send_failed_title">Отправить неудачные сообщения</string>
+    <string name="dialog_send_failed_desc">Все неудачные попытки отправки будут сброшены в статус ожидания для повторной попытки.</string>
+    <string name="dialog_test_api_title">Тестировать подключение к API</string>
+    <string name="dialog_test_api_desc">На указанный URL-адрес вебхука будет отправлен тестовый ping-запрос для проверки доступности.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">Поиск по отправителю, тексту или хешу…</string>
+    <string name="clear">Очистить</string>
+    <string name="filter_all">Все (%1$d)</string>
+    <string name="filter_matched">Подошли (%1$d)</string>
+    <string name="filter_skipped">Пропущены (%1$d)</string>
+    <string name="filter_success">Успешно (%1$d)</string>
+    <string name="filter_pending">Ожидают (%1$d)</string>
+    <string name="filter_failed">Ошибки (%1$d)</string>
+    <string name="empty_logs_filtered">Нет записей SMS, соответствующих фильтрам.</string>
+    <string name="empty_logs_initial">Пока не перехвачено ни одного SMS-сообщения.</string>
+    <string name="dialog_send_record_title">Отправить в API</string>
+    <string name="dialog_send_record_desc">Вы уверены, что хотите отправить это сообщение (от %1$s) в API?</string>
+    <string name="badge_skipped">ПРОПУЩЕНО</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">Отправлено: %1$d раз(а)</string>
+    <string name="action_send_to_api">Отправить в API</string>
+    <string name="copy_message_id">Копировать ID</string>
+    <string name="toast_copied">%1$s скопирован в буфер обмена</string>
+    <string name="label_message_id">ID сообщения</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API Пересыльщик</string>
+    <string name="about_app_desc">Автоматический мост SMS в REST API. Мгновенно перехватывает входящие сообщения и надежно пересылает их.</string>
+    <string name="section_target_auth">Цель и авторизация</string>
+    <string name="field_webhook_url">URL эндпоинта вебхука</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">Метод авторизации</string>
+    <string name="auth_none">Без авторизации</string>
+    <string name="auth_basic">Basic Auth</string>
+    <string name="auth_bearer">Токен Bearer</string>
+    <string name="auth_custom">Пользовательский заголовок (Custom Header)</string>
+    <string name="btn_change">Изменить</string>
+    <string name="btn_test_connection">Проверить связь</string>
+    <string name="btn_save_config">Сохранить настройки</string>
+    <string name="section_filtering_rules">Правила фильтрации SMS</string>
+    <string name="field_sender_filter">Фильтр отправителя</string>
+    <string name="all_senders_default">Все отправители (По умолчанию)</string>
+    <string name="dialog_select_senders">Выбор отправителей</string>
+    <string name="search_senders_placeholder">Поиск или ввод отправителя…</string>
+    <string name="action_add_sender">Добавить отправителя \"%1$s\"</string>
+    <string name="btn_done">Готово</string>
+    <string name="field_keyword_filter">Фильтр по ключевым словам (Опционально)</string>
+    <string name="keyword_placeholder">Оставьте пустым для любого текста</string>
+    <string name="section_reliability">Надежность и фоновая работа в ОС</string>
+    <string name="setting_autostart_title">Автозапуск при загрузке устройства</string>
+    <string name="setting_autostart_desc">Перезапускает службу после перезагрузки телефона.</string>
+    <string name="setting_sync_title">15-минутная синхронизация WorkManager</string>
+    <string name="setting_sync_desc">Периодическая фоновая проверка для ожидающих записей.</string>
+    <string name="setting_battery_title">Оптимизация батареи</string>
+    <string name="battery_exempted">Исключено (Оптимально)</string>
+    <string name="battery_not_exempted">Не исключено (Может приостанавливаться)</string>
+    <string name="btn_configure">Настроить</string>
+    <string name="battery_completed">Выполнено</string>
+    <string name="section_service_status">Состояние службы</string>
+    <string name="section_language">Язык приложения / Language</string>
+    <string name="language_selector_title">Язык</string>
+    <string name="language_selector_sub">Выберите язык интерфейса приложения</string>
+    <string name="system_default_language">Системный по умолчанию</string>
+    <string name="dialog_tls_title">Безопасность и шифрование вебхука</string>
+    <string name="dialog_tls_desc">• Для HTTPS обязательно используется строгий TLS 1.2+.\n• Учетные данные и токены надежно зашифрованы через Android Keystore (AES256-GCM).</string>
+    <string name="btn_got_it">Понятно</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="dialog_auth_basic_title">Настройка Basic Auth</string>
+    <string name="dialog_auth_bearer_title">Настройка токена Bearer</string>
+    <string name="dialog_auth_custom_title">Настройка пользовательских заголовков</string>
+    <string name="dialog_auth_default_title">Настройка авторизации</string>
+    <string name="field_username">Имя пользователя</string>
+    <string name="field_password">Пароль</string>
+    <string name="field_leave_blank_clear">Оставьте пустым для сброса</string>
+    <string name="field_bearer_token">Токен Bearer</string>
+    <string name="label_custom_headers_array">Список пользовательских заголовков:</string>
+    <string name="btn_add_header">Добавить заголовок</string>
+    <string name="auth_no_config_needed">Для этого типа авторизации дополнительные параметры не требуются.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">Служба SMS2API запущена на переднем плане</string>
+    <string name="snack_service_stopped">Служба SMS2API остановлена</string>
+    <string name="snack_queue_triggered">Отправка очереди запущена</string>
+    <string name="snack_delivered_success">Успешно доставлено</string>
+    <string name="snack_delivered_failed">Ошибка доставки, сохранено в очереди</string>
+    <string name="snack_retry_failed_queued">%1$d сообщений поставлено в очередь на повтор</string>
+    <string name="snack_queued_all_resend">Все записи поставлены в очередь для повторной отправки</string>
+    <string name="snack_cleared_delivered">Все доставленные записи очищены</string>
+    <string name="snack_cleared_all">Все локальные записи очищены</string>
+    <string name="snack_historical_completed">Импорт завершен: Просканировано: %1$d | Подошло: %2$d | В очереди: %3$d</string>
+    <string name="snack_historical_failed">Не удалось импортировать SMS: %1$s</string>
+    <string name="snack_config_saved">Настройки цели и авторизации сохранены</string>
+    <string name="conn_test_success">Успех! Эндпоинт доступен (HTTP %1$d)</string>
+    <string name="conn_test_failed">Ошибка: %1$s</string>
+</resources>

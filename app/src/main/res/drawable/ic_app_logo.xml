@@ -1,0 +1,169 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Layer 0: Modern Deep Slate / Indigo Squircle Base (App Canvas) -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M 24,6 
+                 H 84 
+                 C 96,6 102,12 102,24 
+                 V 84 
+                 C 102,96 96,102 84,102 
+                 H 24 
+                 C 12,102 6,96 6,84 
+                 V 24 
+                 C 6,12 12,6 24,6 
+                 Z" />
+
+    <!-- Ambient Indigo Radial Glow Center -->
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M 54,20 A 34,34 0 1,0 54,88 A 34,34 0 1,0 54,20 Z" />
+
+    <!-- Subtle Tech Axis & Network Orbit Lines -->
+    <path
+        android:strokeColor="#1E293B"
+        android:strokeWidth="1.2"
+        android:pathData="M 54,16 A 38,38 0 1,0 54,92 A 38,38 0 1,0 54,16 Z" />
+    <path
+        android:strokeColor="#312E81"
+        android:strokeWidth="0.8"
+        android:pathData="M 54,26 A 28,28 0 1,0 54,82 A 28,28 0 1,0 54,26 Z" />
+
+    <!-- Drop Shadow for the Primary SMS Bubble -->
+    <path
+        android:fillColor="#35000000"
+        android:pathData="M 26,33 
+                 C 22.5,33 20,35.5 20,39 
+                 V 61 
+                 C 20,64.5 22.5,67 26,67 
+                 H 29 
+                 L 24,76 
+                 L 35,67 
+                 H 52 
+                 C 55.5,67 58,64.5 58,61 
+                 V 39 
+                 C 58,35.5 55.5,33 52,33 
+                 Z" />
+
+    <!-- Layer 1: SMS Message Bubble (Source Payload) in Vibrant Indigo -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M 26,30 
+                 C 22.5,30 20,32.5 20,36 
+                 V 58 
+                 C 20,61.5 22.5,64 26,64 
+                 H 29 
+                 L 24,73 
+                 L 35,64 
+                 H 52 
+                 C 55.5,64 58,61.5 58,58 
+                 V 36 
+                 C 58,32.5 55.5,30 52,30 
+                 Z" />
+
+    <!-- Bubble Specular Highlight (Luminous Top Rim) -->
+    <path
+        android:fillColor="#818CF8"
+        android:pathData="M 26,30 
+                 C 22.5,30 20,32.5 20,36 
+                 V 40 
+                 C 22,33.5 26,32 32,32 
+                 H 52 
+                 C 55.5,32 58,33.5 58,36 
+                 V 36 
+                 C 58,32.5 55.5,30 52,30 
+                 Z" />
+
+    <!-- SMS Data Content Lines (Payload Representation) -->
+    <!-- Line 1: Primary text stream -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 27,39 
+                 H 45 
+                 C 46,39 46.8,39.7 46.8,40.5 
+                 C 46.8,41.3 46,42 45,42 
+                 H 27 
+                 C 26,42 25.2,41.3 25.2,40.5 
+                 C 25.2,39.7 26,39 27,39 
+                 Z" />
+
+    <!-- Line 2: Secondary text stream -->
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M 27,45 
+                 H 39 
+                 C 40,45 40.8,45.7 40.8,46.5 
+                 C 40.8,47.3 40,48 39,48 
+                 H 27 
+                 C 26,48 25.2,47.3 25.2,46.5 
+                 C 25.2,45.7 26,45 27,45 
+                 Z" />
+
+    <!-- Line 3: Timestamp & sender badge mark -->
+    <path
+        android:fillColor="#A5B4FC"
+        android:pathData="M 27,51 
+                 H 33 
+                 C 33.8,51 34.5,51.6 34.5,52.2 
+                 C 34.5,52.8 33.8,53.5 33,53.5 
+                 H 27 
+                 C 26.2,53.5 25.5,52.8 25.5,52.2 
+                 C 25.5,51.6 26.2,51 27,51 
+                 Z" />
+
+    <!-- Layer 2: Fast-Forward API Chevrons & Acceleration Rays -->
+    <!-- Intermediate Velocity Chevron (Electric Sky Cyan) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M 46,36 
+                 L 58,47 
+                 L 46,58 
+                 H 52 
+                 L 64,47 
+                 L 52,36 
+                 Z" />
+
+    <!-- Primary Supersonic Forward Arrow (Neon Cyan to Teal Beam) -->
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M 57,34 
+                 L 72,47 
+                 L 57,60 
+                 H 63.5 
+                 L 78.5,47 
+                 L 63.5,34 
+                 Z" />
+
+    <!-- Layer 3: REST API / Webhook Destination Beacon (HTTP 200 Delivery) -->
+    <!-- Outer Glow Aura -->
+    <path
+        android:fillColor="#10B981"
+        android:fillAlpha="0.35"
+        android:pathData="M 79,41 A 6,6 0 1,0 79,53 A 6,6 0 1,0 79,41 Z" />
+
+    <!-- Core Success Beacon -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M 79,43.2 A 3.8,3.8 0 1,0 79,50.8 A 3.8,3.8 0 1,0 79,43.2 Z" />
+
+    <!-- Center Pulse Light Dot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 79,45.4 A 1.6,1.6 0 1,0 79,48.6 A 1.6,1.6 0 1,0 79,45.4 Z" />
+
+    <!-- Real-time Webhook Signal Arcs -->
+    <path
+        android:strokeColor="#34D399"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M 83,43 C 86,45 86,49 83,51" />
+    <path
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round"
+        android:pathData="M 86,40.5 C 90,43.5 90,50.5 86,53.5" />
+</vector>

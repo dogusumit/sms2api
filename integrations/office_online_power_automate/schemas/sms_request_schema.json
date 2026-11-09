@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sms2ApiPayload",
+  "description": "SMS2API Android uygulamasından iletilen gelen SMS yükü şeması",
+  "type": "object",
+  "properties": {
+    "message_id": {
+      "type": "string",
+      "description": "Mesajın tekil SHA-256 tabanlı kimlik değeri (Örn: sms_1711234567890_a1f4b8c9)"
+    },
+    "sender": {
+      "type": "string",
+      "description": "SMS'i gönderen numara veya alfanumerik başlık (Örn: VODAFONE, GARANTI, +905551234567)"
+    },
+    "body": {
+      "type": "string",
+      "description": "Gelen SMS'in tam metin içeriği"
+    },
+    "timestamp": {
+      "type": "integer",
+      "description": "Mesajın cihaz tarafından alındığı Unix zaman damgası (milisaniye cinsinden)"
+    }
+  },
+  "required": [
+    "message_id",
+    "sender",
+    "body",
+    "timestamp"
+  ]
+}
