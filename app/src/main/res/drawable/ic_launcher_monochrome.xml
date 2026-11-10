@@ -1,0 +1,55 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- SMS Message Bubble Silhouette -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 26,32 
+                 C 22.5,32 20,34.5 20,38 
+                 V 60 
+                 C 20,63.5 22.5,66 26,66 
+                 H 29 
+                 L 24,75 
+                 L 35,66 
+                 H 52 
+                 C 55.5,66 58,63.5 58,60 
+                 V 38 
+                 C 58,34.5 55.5,32 52,32 
+                 Z" />
+
+    <!-- Forward Arrow Chevrons Silhouette -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 46,38 
+                 L 58,49 
+                 L 46,60 
+                 H 52 
+                 L 64,49 
+                 L 52,38 
+                 Z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 57,36 
+                 L 72,49 
+                 L 57,62 
+                 H 63.5 
+                 L 78.5,49 
+                 L 63.5,36 
+                 Z" />
+
+    <!-- Destination Beacon Dot -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 79,45.2 A 3.8,3.8 0 1,0 79,52.8 A 3.8,3.8 0 1,0 79,45.2 Z" />
+
+    <!-- Signal Arc -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M 83,45 C 86,47 86,51 83,53" />
+</vector>

@@ -1,0 +1,152 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">SMS Forwarder Service</string>
+    <string name="channel_desc">Persistent service capturing and forwarding SMS messages to REST API</string>
+    <string name="service_active_title">SMS2API Active</string>
+    <string name="service_active_desc">Monitoring incoming SMS and forwarding to API</string>
+    <string name="service_active_status">Service Active</string>
+    <string name="service_stopped_status">Service Stopped</string>
+    <string name="service_active_sub">Background SMS capture is active</string>
+    <string name="service_stopped_sub">Turn on for automatic background capture</string>
+    <string name="stop_service">Stop Service</string>
+    <string name="service_messages_queued">%1$s • %2$d message(s) queued</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_logs">Logs &amp; Queue</string>
+    <string name="nav_logs_short">Logs</string>
+    <string name="nav_settings">Configuration</string>
+    <string name="nav_settings_short">Settings</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">Queue &amp; Delivery Metrics</string>
+    <string name="metric_matched">Filter Matching</string>
+    <string name="metric_skipped">Filter Not Matching</string>
+    <string name="metric_delivered">Delivered</string>
+    <string name="metric_pending">Pending</string>
+    <string name="metric_failed">Failed</string>
+    <string name="metric_total">Total Captured</string>
+    <string name="section_actions">Operational Actions</string>
+    <string name="action_sync_all_past">Sync All Past SMS (Historical Bulk)</string>
+    <string name="action_scanning_inbox">Scanning Inbox Messages…</string>
+    <string name="action_resend_all">Resend All</string>
+    <string name="action_send_pending">Send Pending</string>
+    <string name="action_send_failed">Send Failed</string>
+    <string name="action_test_api">Test API</string>
+    <string name="action_testing">Testing…</string>
+    <string name="action_sending" tools:ignore="MissingTranslation">Sending…</string>
+    <string name="battery_opt_title">Battery Optimization Enabled</string>
+    <string name="battery_opt_desc">Allow background execution for uninterrupted SMS forwarding.</string>
+    <string name="battery_opt_allow">Allow</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">Yes</string>
+    <string name="dialog_btn_no">No</string>
+    <string name="dialog_sync_title">Sync All Past SMS</string>
+    <string name="dialog_sync_desc">This will scan your device inbox and bulk import all past SMS messages matching your filter criteria into the queue.</string>
+    <string name="dialog_resend_all_title">Resend All Records</string>
+    <string name="dialog_resend_all_desc">This will reset all SMS records (delivered, pending, and failed) back to pending and queue them for redelivery.</string>
+    <string name="dialog_send_pending_title">Send Pending Queue</string>
+    <string name="dialog_send_pending_desc">This will immediately trigger the background worker to dispatch all pending SMS messages in the queue.</string>
+    <string name="dialog_send_failed_title">Send Failed Messages</string>
+    <string name="dialog_send_failed_desc">This will reset all failed SMS delivery attempts back to pending and schedule them for retry.</string>
+    <string name="dialog_test_api_title">Test API Connection</string>
+    <string name="dialog_test_api_desc">This will send a test ping request to your configured webhook endpoint URL to verify connectivity.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">Search sender, body, or hash…</string>
+    <string name="clear">Clear</string>
+    <string name="filter_all">All (%1$d)</string>
+    <string name="filter_matched">Filter Matching (%1$d)</string>
+    <string name="filter_skipped">Filter Not Matching (%1$d)</string>
+    <string name="filter_success">Success (%1$d)</string>
+    <string name="filter_pending">Pending (%1$d)</string>
+    <string name="filter_failed">Failed (%1$d)</string>
+    <string name="empty_logs_filtered">No SMS records match your filter criteria.</string>
+    <string name="empty_logs_initial">No SMS messages captured yet.</string>
+    <string name="dialog_send_record_title">Send to API</string>
+    <string name="dialog_send_record_desc">Are you sure you want to send this message (from %1$s) to the API?</string>
+    <string name="badge_skipped">SKIPPED</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">Sent: %1$d time(s)</string>
+    <string name="action_send_to_api">Send to API</string>
+    <string name="copy_message_id">Copy ID</string>
+    <string name="toast_copied">%1$s copied to clipboard</string>
+    <string name="label_message_id">Message ID</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API Forwarder</string>
+    <string name="about_app_desc">Automated SMS to REST API Bridge. Instantly captures incoming messages and forwards them securely.</string>
+    <string name="section_target_auth">Target &amp; Authentication</string>
+    <string name="field_webhook_url">Webhook Endpoint URL</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">Auth Method</string>
+    <string name="auth_none">None</string>
+    <string name="auth_basic">Basic Auth</string>
+    <string name="auth_bearer">Bearer Token</string>
+    <string name="auth_custom">Custom Header</string>
+    <string name="btn_change">Change</string>
+    <string name="btn_test_connection">Test Connection</string>
+    <string name="btn_save_config">Save Config</string>
+    <string name="section_filtering_rules">SMS Filtering Rules</string>
+    <string name="field_sender_filter">Sender Filter</string>
+    <string name="all_senders_default">All Senders (Default)</string>
+    <string name="dialog_select_senders">Select Senders</string>
+    <string name="search_senders_placeholder">Search or type sender…</string>
+    <string name="action_add_sender">Add sender \"%1$s\"</string>
+    <string name="btn_done">Done</string>
+    <string name="field_keyword_filter">Keyword Filter (Optional)</string>
+    <string name="keyword_placeholder">Leave blank for any body text</string>
+    <string name="section_reliability">Reliability &amp; OS Survival</string>
+    <string name="setting_autostart_title">Auto-Start On Device Boot</string>
+    <string name="setting_autostart_desc">Restarts service after reboot.</string>
+    <string name="setting_sync_title">15-Min WorkManager Sync</string>
+    <string name="setting_sync_desc">Periodic fallback worker for PENDING records.</string>
+    <string name="setting_battery_title">Battery Optimization</string>
+    <string name="battery_exempted">Exempted (Optimal)</string>
+    <string name="battery_not_exempted">Not exempted (May be paused)</string>
+    <string name="btn_configure">Configure</string>
+    <string name="battery_completed">Completed</string>
+    <string name="section_service_status">Service Status</string>
+    <string name="section_language">Language / Dil</string>
+    <string name="language_selector_title">App Language</string>
+    <string name="language_selector_sub">Choose display language for the application</string>
+    <string name="system_default_language">System Default</string>
+    <string name="dialog_tls_title">Webhook Security &amp; Encryption</string>
+    <string name="dialog_tls_desc">• Strict TLS 1.2+ mandatory for HTTPS endpoints.\n• Credentials &amp; tokens are securely encrypted via Android Keystore (AES256-GCM).</string>
+    <string name="btn_got_it">Got it</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="dialog_auth_basic_title">Configure Basic Auth</string>
+    <string name="dialog_auth_bearer_title">Configure Bearer Token</string>
+    <string name="dialog_auth_custom_title">Configure Custom Headers</string>
+    <string name="dialog_auth_default_title">Configure Authentication</string>
+    <string name="field_username">Username</string>
+    <string name="field_password">Password</string>
+    <string name="field_leave_blank_clear">Leave blank to clear</string>
+    <string name="field_bearer_token">Bearer Token</string>
+    <string name="label_custom_headers_array">Custom Headers Array:</string>
+    <string name="btn_add_header">Add Header</string>
+    <string name="auth_no_config_needed">No additional configuration required for this auth type.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">SMS2API service started in foreground</string>
+    <string name="snack_service_stopped">SMS2API service stopped</string>
+    <string name="snack_queue_triggered">Triggered queue delivery</string>
+    <string name="snack_delivered_success">Delivered successfully</string>
+    <string name="snack_delivered_failed">Delivery failed, remaining queued</string>
+    <string name="snack_retry_failed_queued">Queued %1$d failed message(s) for retry</string>
+    <string name="snack_queued_all_resend">Queued all records for resend</string>
+    <string name="snack_cleared_delivered">Cleared all delivered records</string>
+    <string name="snack_cleared_all">Cleared all local records</string>
+    <string name="snack_historical_completed">Historical import completed: Scanned: %1$d | Matched: %2$d | Queued: %3$d</string>
+    <string name="snack_historical_failed">Failed to import inbox: %1$s</string>
+    <string name="snack_config_saved">Target &amp; Auth saved successfully</string>
+    <string name="conn_test_success">Success! Endpoint reachable with HTTP %1$d</string>
+    <string name="conn_test_failed">Failed: %1$s</string>
+    <string name="err_configure_url_first" tools:ignore="MissingTranslation">Please configure a valid Webhook URL in Settings first!</string>
+    <string name="err_permission_receive_sms" tools:ignore="MissingTranslation">SMS receive permission is required. Please grant it in settings.</string>
+    <string name="err_permission_read_sms" tools:ignore="MissingTranslation">SMS read permission is required to import past SMS messages.</string>
+    <string name="err_invalid_url_format" tools:ignore="MissingTranslation">Invalid Webhook URL format! (Must start with http:// or https://)</string>
+</resources>

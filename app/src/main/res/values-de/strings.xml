@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">SMS-Weiterleitungsdienst</string>
+    <string name="channel_desc">Dauerhafter Hintergrunddienst zum Erfassen und Weiterleiten von SMS-Nachrichten an eine REST-API</string>
+    <string name="service_active_title">SMS2API Aktiv</string>
+    <string name="service_active_desc">Überwacht eingehende SMS und leitet an API weiter</string>
+    <string name="service_active_status">Dienst aktiv</string>
+    <string name="service_stopped_status">Dienst gestoppt</string>
+    <string name="service_active_sub">Hintergrund-SMS-Erfassung ist aktiv</string>
+    <string name="service_stopped_sub">Einschalten für automatische Erfassung im Hintergrund</string>
+    <string name="stop_service">Dienst beenden</string>
+    <string name="service_messages_queued">%1$s • %2$d Nachricht(en) in der Warteschlange</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_logs">Protokolle &amp; Warteschlange</string>
+    <string name="nav_logs_short">Protokolle</string>
+    <string name="nav_settings">Konfiguration</string>
+    <string name="nav_settings_short">Einstellungen</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">Warteschlangen- &amp; Zustellmetriken</string>
+    <string name="metric_matched">Filtertreffer</string>
+    <string name="metric_skipped">Nicht gefiltert</string>
+    <string name="metric_delivered">Zugestellt</string>
+    <string name="metric_pending">Ausstehend</string>
+    <string name="metric_failed">Fehlgeschlagen</string>
+    <string name="metric_total">Gesamt erfasst</string>
+    <string name="section_actions">Betriebsaktionen</string>
+    <string name="action_sync_all_past">Vergangene SMS synchronisieren (Massenimport)</string>
+    <string name="action_scanning_inbox">Posteingangsnachrichten werden gescannt…</string>
+    <string name="action_resend_all">Alle erneut senden</string>
+    <string name="action_send_pending">Ausstehende senden</string>
+    <string name="action_send_failed">Fehlgeschlagene wiederholen</string>
+    <string name="action_test_api">API testen</string>
+    <string name="action_testing">Wird getestet…</string>
+    <string name="battery_opt_title">Akku-Optimierung aktiviert</string>
+    <string name="battery_opt_desc">Erlaube Hintergrundausführung für unterbrechungsfreie SMS-Weiterleitung.</string>
+    <string name="battery_opt_allow">Erlauben</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">Ja</string>
+    <string name="dialog_btn_no">Nein</string>
+    <string name="dialog_sync_title">Alle vergangenen SMS synchronisieren</string>
+    <string name="dialog_sync_desc">Scannt den Posteingang des Geräts und importiert alle passenden früheren SMS-Nachrichten in die Warteschlange.</string>
+    <string name="dialog_resend_all_title">Alle Datensätze erneut senden</string>
+    <string name="dialog_resend_all_desc">Setzt alle SMS-Datensätze (zugestellt, ausstehend, fehlgeschlagen) auf ausstehend zurück und stellt sie erneut in die Warteschlange.</string>
+    <string name="dialog_send_pending_title">Ausstehende Warteschlange senden</string>
+    <string name="dialog_send_pending_desc">Löst sofort den Hintergrunddienst aus, um alle ausstehenden SMS in der Warteschlange abzusenden.</string>
+    <string name="dialog_send_failed_title">Fehlgeschlagene Nachrichten senden</string>
+    <string name="dialog_send_failed_desc">Setzt fehlgeschlagene Sendeversuche auf ausstehend zurück und plant deren Wiederholung.</string>
+    <string name="dialog_test_api_title">API-Verbindung testen</string>
+    <string name="dialog_test_api_desc">Sendet einen Test-Ping an Ihre konfigurierte Webhook-URL, um die Verbindung zu prüfen.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">Absender, Text oder Hash suchen…</string>
+    <string name="clear">Löschen</string>
+    <string name="filter_all">Alle (%1$d)</string>
+    <string name="filter_matched">Passend (%1$d)</string>
+    <string name="filter_skipped">Übersprungen (%1$d)</string>
+    <string name="filter_success">Erfolgreich (%1$d)</string>
+    <string name="filter_pending">Ausstehend (%1$d)</string>
+    <string name="filter_failed">Fehlgeschlagen (%1$d)</string>
+    <string name="empty_logs_filtered">Keine SMS-Datensätze entsprechen Ihren Filterkriterien.</string>
+    <string name="empty_logs_initial">Bisher wurden keine SMS-Nachrichten erfasst.</string>
+    <string name="dialog_send_record_title">An API senden</string>
+    <string name="dialog_send_record_desc">Möchten Sie diese Nachricht (von %1$s) wirklich an die API senden?</string>
+    <string name="badge_skipped">ÜBERSPRUNGEN</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">Gesendet: %1$d Mal</string>
+    <string name="action_send_to_api">An API senden</string>
+    <string name="copy_message_id">ID kopieren</string>
+    <string name="toast_copied">%1$s in die Zwischenablage kopiert</string>
+    <string name="label_message_id">Nachrichten-ID</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API Weiterleitung</string>
+    <string name="about_app_desc">Automatisierte Brücke von SMS zu REST-API. Erfasst eingehende Nachrichten sofort und leitet sie sicher weiter.</string>
+    <string name="section_target_auth">Ziel &amp; Authentifizierung</string>
+    <string name="field_webhook_url">Webhook-Endpunkt-URL</string>
+    <string name="field_webhook_placeholder">https://api.ihredomain.de/v1/sms/webhook</string>
+    <string name="field_auth_method">Authentifizierungsmethode</string>
+    <string name="auth_none">Keine</string>
+    <string name="auth_basic">Basic Auth</string>
+    <string name="auth_bearer">Bearer-Token</string>
+    <string name="auth_custom">Benutzerdefinierter Header (Custom Header)</string>
+    <string name="btn_change">Ändern</string>
+    <string name="btn_test_connection">Verbindung testen</string>
+    <string name="btn_save_config">Konfig speichern</string>
+    <string name="section_filtering_rules">SMS-Filterregeln</string>
+    <string name="field_sender_filter">Absenderfilter</string>
+    <string name="all_senders_default">Alle Absender (Standard)</string>
+    <string name="dialog_select_senders">Absender auswählen</string>
+    <string name="search_senders_placeholder">Absender suchen oder eingeben…</string>
+    <string name="action_add_sender">Absender \"%1$s\" hinzufügen</string>
+    <string name="btn_done">Fertig</string>
+    <string name="field_keyword_filter">Schlagwortfilter (Optional)</string>
+    <string name="keyword_placeholder">Leer lassen für beliebigen Text</string>
+    <string name="section_reliability">Zuverlässigkeit &amp; Betriebssystemerhalt</string>
+    <string name="setting_autostart_title">Autostart bei Gerätestart</string>
+    <string name="setting_autostart_desc">Startet den Dienst nach einem Geräteneustart automatisch.</string>
+    <string name="setting_sync_title">15-Min WorkManager-Synchronisierung</string>
+    <string name="setting_sync_desc">Periodischer Hintergrunddienst für ausstehende Datensätze.</string>
+    <string name="setting_battery_title">Akku-Optimierung</string>
+    <string name="battery_exempted">Ausgenommen (Optimal)</string>
+    <string name="battery_not_exempted">Nicht ausgenommen (Kann pausiert werden)</string>
+    <string name="btn_configure">Konfigurieren</string>
+    <string name="battery_completed">Abgeschlossen</string>
+    <string name="section_service_status">Dienststatus</string>
+    <string name="section_language">App-Sprache / Language</string>
+    <string name="language_selector_title">Sprache</string>
+    <string name="language_selector_sub">Wählen Sie die Anzeigesprache der App</string>
+    <string name="system_default_language">Systemstandard</string>
+    <string name="dialog_tls_title">Webhook-Sicherheit &amp; Verschlüsselung</string>
+    <string name="dialog_tls_desc">• Striktes TLS 1.2+ für HTTPS-Endpunkte erforderlich.\n• Anmeldeinformationen und Tokens werden sicher über Android Keystore (AES256-GCM) verschlüsselt.</string>
+    <string name="btn_got_it">Verstanden</string>
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="dialog_auth_basic_title">Basic Auth konfigurieren</string>
+    <string name="dialog_auth_bearer_title">Bearer-Token konfigurieren</string>
+    <string name="dialog_auth_custom_title">Benutzerdefinierte Header konfigurieren</string>
+    <string name="dialog_auth_default_title">Authentifizierung konfigurieren</string>
+    <string name="field_username">Benutzername</string>
+    <string name="field_password">Passwort</string>
+    <string name="field_leave_blank_clear">Leer lassen zum Löschen</string>
+    <string name="field_bearer_token">Bearer-Token</string>
+    <string name="label_custom_headers_array">Liste benutzerdefinierter Header:</string>
+    <string name="btn_add_header">Header hinzufügen</string>
+    <string name="auth_no_config_needed">Für diesen Authentifizierungstyp ist keine zusätzliche Konfiguration erforderlich.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">SMS2API-Dienst im Vordergrund gestartet</string>
+    <string name="snack_service_stopped">SMS2API-Dienst gestoppt</string>
+    <string name="snack_queue_triggered">Warteschlangenübertragung ausgelöst</string>
+    <string name="snack_delivered_success">Erfolgreich zugestellt</string>
+    <string name="snack_delivered_failed">Zustellung fehlgeschlagen, verbleibt in Warteschlange</string>
+    <string name="snack_retry_failed_queued">%1$d fehlgeschlagene Nachricht(en) zur Wiederholung eingereiht</string>
+    <string name="snack_queued_all_resend">Alle Datensätze zum erneuten Senden eingereiht</string>
+    <string name="snack_cleared_delivered">Alle zugestellten Datensätze wurden gelöscht</string>
+    <string name="snack_cleared_all">Alle lokalen Datensätze wurden gelöscht</string>
+    <string name="snack_historical_completed">Import abgeschlossen: Gescannt: %1$d | Passend: %2$d | Eingereiht: %3$d</string>
+    <string name="snack_historical_failed">Fehler beim Posteingangsimport: %1$s</string>
+    <string name="snack_config_saved">Ziel- &amp; Authentifizierungskonfiguration erfolgreich gespeichert</string>
+    <string name="conn_test_success">Erfolg! Endpunkt erreichbar (HTTP %1$d)</string>
+    <string name="conn_test_failed">Fehlgeschlagen: %1$s</string>
+</resources>

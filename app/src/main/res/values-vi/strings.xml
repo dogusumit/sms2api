@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">Dịch vụ chuyển tiếp SMS</string>
+    <string name="channel_desc">Dịch vụ nền liên tục bắt và chuyển tiếp tin nhắn SMS đến REST API</string>
+    <string name="service_active_title">SMS2API Đang hoạt động</string>
+    <string name="service_active_desc">Đang theo dõi tin nhắn SMS đến và chuyển tiếp tới API</string>
+    <string name="service_active_status">Dịch vụ đang chạy</string>
+    <string name="service_stopped_status">Dịch vụ đã dừng</string>
+    <string name="service_active_sub">Thu thập tin nhắn SMS nền đang bật</string>
+    <string name="service_stopped_sub">Bật để tự động thu thập tin nhắn trong nền</string>
+    <string name="stop_service">Dừng dịch vụ</string>
+    <string name="service_messages_queued">%1$s • %2$d tin nhắn đang chờ trong hàng đợi</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Bảng điều khiển</string>
+    <string name="nav_logs">Nhật ký &amp; Hàng đợi</string>
+    <string name="nav_logs_short">Nhật ký</string>
+    <string name="nav_settings">Cấu hình</string>
+    <string name="nav_settings_short">Cài đặt</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">Số liệu Hàng đợi &amp; Phân phối</string>
+    <string name="metric_matched">Khớp bộ lọc</string>
+    <string name="metric_skipped">Không khớp bộ lọc</string>
+    <string name="metric_delivered">Đã gửi thành công</string>
+    <string name="metric_pending">Đang chờ</string>
+    <string name="metric_failed">Thất bại</string>
+    <string name="metric_total">Tổng số đã nhận</string>
+    <string name="section_actions">Hành động vận hành</string>
+    <string name="action_sync_all_past">Đồng bộ tất cả SMS cũ (Nhập hàng loạt)</string>
+    <string name="action_scanning_inbox">Đang quét tin nhắn hộp thư đến…</string>
+    <string name="action_resend_all">Gửi lại tất cả</string>
+    <string name="action_send_pending">Gửi tin đang chờ</string>
+    <string name="action_send_failed">Gửi lại tin thất bại</string>
+    <string name="action_test_api">Kiểm tra API</string>
+    <string name="action_testing">Đang kiểm tra…</string>
+    <string name="battery_opt_title">Tối ưu hóa pin đang bật</string>
+    <string name="battery_opt_desc">Cho phép ứng dụng chạy ngầm để việc chuyển tiếp SMS không bị gián đoạn.</string>
+    <string name="battery_opt_allow">Cho phép</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">Có</string>
+    <string name="dialog_btn_no">Không</string>
+    <string name="dialog_sync_title">Đồng bộ tất cả SMS trong quá khứ</string>
+    <string name="dialog_sync_desc">Thao tác này sẽ quét hộp thư đến của thiết bị và nhập tất cả các tin nhắn SMS cũ khớp với bộ lọc vào hàng đợi.</string>
+    <string name="dialog_resend_all_title">Gửi lại toàn bộ bản ghi</string>
+    <string name="dialog_resend_all_desc">Thao tác này sẽ đặt lại tất cả các bản ghi (đã gửi, đang chờ và thất bại) về trạng thái chờ và xếp hàng để gửi lại.</string>
+    <string name="dialog_send_pending_title">Gửi hàng đợi đang chờ</string>
+    <string name="dialog_send_pending_desc">Kích hoạt ngay lập tức tiến trình nền để gửi tất cả các tin nhắn SMS đang chờ trong hàng đợi.</string>
+    <string name="dialog_send_failed_title">Gửi lại tin nhắn thất bại</string>
+    <string name="dialog_send_failed_desc">Đặt lại tất cả các lần gửi SMS thất bại về trạng thái chờ và lên lịch gửi lại.</string>
+    <string name="dialog_test_api_title">Kiểm tra kết nối API</string>
+    <string name="dialog_test_api_desc">Sẽ gửi một yêu cầu ping thử nghiệm đến URL webhook đã cấu hình để xác minh khả năng kết nối.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">Tìm người gửi, nội dung hoặc mã băm…</string>
+    <string name="clear">Xóa</string>
+    <string name="filter_all">Tất cả (%1$d)</string>
+    <string name="filter_matched">Khớp lọc (%1$d)</string>
+    <string name="filter_skipped">Bỏ qua (%1$d)</string>
+    <string name="filter_success">Thành công (%1$d)</string>
+    <string name="filter_pending">Đang chờ (%1$d)</string>
+    <string name="filter_failed">Thất bại (%1$d)</string>
+    <string name="empty_logs_filtered">Không có bản ghi SMS nào khớp với tiêu chí lọc.</string>
+    <string name="empty_logs_initial">Chưa nhận được tin nhắn SMS nào.</string>
+    <string name="dialog_send_record_title">Gửi đến API</string>
+    <string name="dialog_send_record_desc">Bạn có chắc chắn muốn gửi tin nhắn này (từ %1$s) đến API không?</string>
+    <string name="badge_skipped">BỎ QUA</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">Đã gửi: %1$d lần</string>
+    <string name="action_send_to_api">Gửi đến API</string>
+    <string name="copy_message_id">Sao chép ID</string>
+    <string name="toast_copied">Đã sao chép %1$s vào bộ nhớ tạm</string>
+    <string name="label_message_id">ID Tin nhắn</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">Bộ chuyển tiếp SMS2API</string>
+    <string name="about_app_desc">Cầu nối tự động từ tin nhắn SMS đến REST API. Bắt tin nhắn tức thì và chuyển tiếp an toàn.</string>
+    <string name="section_target_auth">Đích đến &amp; Xác thực</string>
+    <string name="field_webhook_url">URL Điểm cuối Webhook</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">Phương thức xác thực</string>
+    <string name="auth_none">Không có</string>
+    <string name="auth_basic">Basic Auth</string>
+    <string name="auth_bearer">Mã Bearer (Bearer Token)</string>
+    <string name="auth_custom">Tiêu đề tùy chỉnh (Custom Header)</string>
+    <string name="btn_change">Thay đổi</string>
+    <string name="btn_test_connection">Kiểm tra kết nối</string>
+    <string name="btn_save_config">Lưu cấu hình</string>
+    <string name="section_filtering_rules">Quy tắc lọc SMS</string>
+    <string name="field_sender_filter">Lọc theo người gửi</string>
+    <string name="all_senders_default">Tất cả người gửi (Mặc định)</string>
+    <string name="dialog_select_senders">Chọn người gửi</string>
+    <string name="search_senders_placeholder">Tìm hoặc nhập tên người gửi…</string>
+    <string name="action_add_sender">Thêm người gửi \"%1$s\"</string>
+    <string name="btn_done">Xong</string>
+    <string name="field_keyword_filter">Lọc theo từ khóa (Tùy chọn)</string>
+    <string name="keyword_placeholder">Để trống để chấp nhận mọi nội dung</string>
+    <string name="section_reliability">Độ tin cậy &amp; Duy trì nền</string>
+    <string name="setting_autostart_title">Tự khởi động khi bật thiết bị</string>
+    <string name="setting_autostart_desc">Tự động khởi động lại dịch vụ sau khi khởi động lại máy.</string>
+    <string name="setting_sync_title">Đồng bộ WorkManager 15 phút</string>
+    <string name="setting_sync_desc">Tiến trình dự phòng định kỳ cho các bản ghi đang chờ.</string>
+    <string name="setting_battery_title">Tối ưu hóa pin</string>
+    <string name="battery_exempted">Đã miễn trừ (Tối ưu)</string>
+    <string name="battery_not_exempted">Chưa miễn trừ (Có thể bị tạm dừng)</string>
+    <string name="btn_configure">Cấu hình</string>
+    <string name="battery_completed">Hoàn thành</string>
+    <string name="section_service_status">Trạng thái dịch vụ</string>
+    <string name="section_language">Ngôn ngữ ứng dụng / Language</string>
+    <string name="language_selector_title">Ngôn ngữ</string>
+    <string name="language_selector_sub">Chọn ngôn ngữ hiển thị cho ứng dụng</string>
+    <string name="system_default_language">Mặc định hệ thống</string>
+    <string name="dialog_tls_title">Bảo mật &amp; Mã hóa Webhook</string>
+    <string name="dialog_tls_desc">• Bắt buộc sử dụng giao thức TLS 1.2+ cho các URL HTTPS.\n• Thông tin xác thực và mã khóa được mã hóa an toàn qua Android Keystore (AES256-GCM).</string>
+    <string name="btn_got_it">Đã hiểu</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="dialog_auth_basic_title">Cấu hình Basic Auth</string>
+    <string name="dialog_auth_bearer_title">Cấu hình Bearer Token</string>
+    <string name="dialog_auth_custom_title">Cấu hình tiêu đề tùy chỉnh</string>
+    <string name="dialog_auth_default_title">Cấu hình xác thực</string>
+    <string name="field_username">Tên người dùng</string>
+    <string name="field_password">Mật khẩu</string>
+    <string name="field_leave_blank_clear">Để trống để xóa</string>
+    <string name="field_bearer_token">Mã Bearer</string>
+    <string name="label_custom_headers_array">Danh sách tiêu đề tùy chỉnh:</string>
+    <string name="btn_add_header">Thêm tiêu đề</string>
+    <string name="auth_no_config_needed">Không yêu cầu cấu hình thêm cho loại xác thực này.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">Dịch vụ SMS2API đã bắt đầu trong nền</string>
+    <string name="snack_service_stopped">Dịch vụ SMS2API đã dừng</string>
+    <string name="snack_queue_triggered">Đã kích hoạt gửi hàng đợi</string>
+    <string name="snack_delivered_success">Đã gửi thành công</string>
+    <string name="snack_delivered_failed">Gửi thất bại, vẫn được giữ trong hàng đợi</string>
+    <string name="snack_retry_failed_queued">Đã thêm %1$d tin nhắn thất bại vào hàng đợi thử lại</string>
+    <string name="snack_queued_all_resend">Đã đưa tất cả bản ghi vào hàng đợi gửi lại</string>
+    <string name="snack_cleared_delivered">Đã xóa tất cả các bản ghi đã gửi</string>
+    <string name="snack_cleared_all">Đã xóa tất cả các bản ghi cục bộ</string>
+    <string name="snack_historical_completed">Nhập hoàn tất: Đã quét: %1$d | Khớp: %2$d | Đưa vào hàng đợi: %3$d</string>
+    <string name="snack_historical_failed">Không thể nhập tin nhắn hộp thư: %1$s</string>
+    <string name="snack_config_saved">Đã lưu cấu hình đích và xác thực</string>
+    <string name="conn_test_success">Thành công! Có thể kết nối điểm cuối (HTTP %1$d)</string>
+    <string name="conn_test_failed">Thất bại: %1$s</string>
+</resources>

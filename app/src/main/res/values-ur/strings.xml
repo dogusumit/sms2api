@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">ایس ایم ایس فارورڈر سروس</string>
+    <string name="channel_desc">موصولہ پیغامات کو پکڑ کر REST API پر بھیجنے والی پس منظر سروس</string>
+    <string name="service_active_title">SMS2API فعال ہے</string>
+    <string name="service_active_desc">موصولہ پیغامات کی نگرانی اور API پر منتقلی جاری ہے</string>
+    <string name="service_active_status">سروس فعال ہے</string>
+    <string name="service_stopped_status">سروس بند ہے</string>
+    <string name="service_active_sub">پس منظر میں ایس ایم ایس وصولی فعال ہے</string>
+    <string name="service_stopped_sub">خودکار پس منظر وصولی کے لیے چالو کریں</string>
+    <string name="stop_service">سروس بند کریں</string>
+    <string name="service_messages_queued">%1$s • %2$d پیغامات قطار میں ہیں</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">ڈیش بورڈ</string>
+    <string name="nav_logs">لاگز اور قطار</string>
+    <string name="nav_logs_short">لاگز</string>
+    <string name="nav_settings">ترتیبات</string>
+    <string name="nav_settings_short">سیٹنگز</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">قطار اور ترسیل کے اعدادوشمار</string>
+    <string name="metric_matched">فلٹر کے مطابق</string>
+    <string name="metric_skipped">فلٹر سے خارج</string>
+    <string name="metric_delivered">ترسیل شدہ</string>
+    <string name="metric_pending">زیر التواء</string>
+    <string name="metric_failed">ناکام</string>
+    <string name="metric_total">کل وصول شدہ</string>
+    <string name="section_actions">آپریشنل اقدامات</string>
+    <string name="action_sync_all_past">تمام پرانے پیغامات سنک کریں (بڑے پیمانے پر درآمد)</string>
+    <string name="action_scanning_inbox">ان باکس پیغامات اسکین کیے جا رہے ہیں…</string>
+    <string name="action_resend_all">تمام دوبارہ بھیجیں</string>
+    <string name="action_send_pending">زیر التواء بھیجیں</string>
+    <string name="action_send_failed">ناکام بھیجیں</string>
+    <string name="action_test_api">API ٹیسٹ کریں</string>
+    <string name="action_testing">ٹیسٹنگ جاری ہے…</string>
+    <string name="battery_opt_title">بیٹری آپٹیمائزیشن فعال ہے</string>
+    <string name="battery_opt_desc">بغیر کسی رکاوٹ کے پیغامات بھیجنے کے لیے پس منظر میں چلنے کی اجازت دیں۔</string>
+    <string name="battery_opt_allow">اجازت دیں</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">ہاں</string>
+    <string name="dialog_btn_no">نہیں</string>
+    <string name="dialog_sync_title">تمام پرانے پیغامات سنک کریں</string>
+    <string name="dialog_sync_desc">یہ آپ کے آلے کے ان باکس کو اسکین کرے گا اور فلٹر کے مطابق تمام پرانے پیغامات کو قطار میں شامل کرے گا۔</string>
+    <string name="dialog_resend_all_title">تمام ریکارڈز دوبارہ بھیجیں</string>
+    <string name="dialog_resend_all_desc">یہ تمام پیغامات (ترسیل شدہ، زیر التواء اور ناکام) کو دوبارہ زیر التواء حالت میں ڈال کر قطار میں لے جائے گا۔</string>
+    <string name="dialog_send_pending_title">زیر التواء قطار بھیجیں</string>
+    <string name="dialog_send_pending_desc">یہ قطار میں موجود تمام زیر التواء پیغامات کو فوری طور پر بھیجنے کے لیے ورکنگ سروس کو متحرک کرے گا۔</string>
+    <string name="dialog_send_failed_title">ناکام پیغامات دوبارہ بھیجیں</string>
+    <string name="dialog_send_failed_desc">یہ ترسیل میں ناکام تمام پیغامات کو دوبارہ زیر التواء کر کے کوشش کے لیے شیڈول کرے گا۔</string>
+    <string name="dialog_test_api_title">API کنکشن ٹیسٹ کریں</string>
+    <string name="dialog_test_api_desc">یہ کنیکٹیویٹی چیک کرنے کے لیے آپ کے ویب ہک اینڈ پوائنٹ پر ٹیسٹ پنگ بھیجے گا۔</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">ارسال کنندہ، متن یا ہیش تلاش کریں…</string>
+    <string name="clear">صاف کریں</string>
+    <string name="filter_all">تمام (%1$d)</string>
+    <string name="filter_matched">مطابق (%1$d)</string>
+    <string name="filter_skipped">خارج شدہ (%1$d)</string>
+    <string name="filter_success">کامیاب (%1$d)</string>
+    <string name="filter_pending">زیر التواء (%1$d)</string>
+    <string name="filter_failed">ناکام (%1$d)</string>
+    <string name="empty_logs_filtered">آپ کے فلٹر کے مطابق کوئی ریکارڈ نہیں ملا۔</string>
+    <string name="empty_logs_initial">ابھی تک کوئی پیغام موصول نہیں ہوا۔</string>
+    <string name="dialog_send_record_title">API پر بھیجیں</string>
+    <string name="dialog_send_record_desc">کیا آپ واقعی یہ پیغام (%1$s کی طرف سے) API پر بھیجنا چاہتے ہیں؟</string>
+    <string name="badge_skipped">نظر انداز</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">ارسال: %1$d بار</string>
+    <string name="action_send_to_api">API پر بھیجیں</string>
+    <string name="copy_message_id">آئی ڈی کاپی کریں</string>
+    <string name="toast_copied">%1$s کلپ بورڈ پر کاپی ہو گیا</string>
+    <string name="label_message_id">پیغام کی آئی ڈی</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API فارورڈر</string>
+    <string name="about_app_desc">خودکار ایس ایم ایس سے REST API پُل۔ موصولہ پیغامات کو فوری طور پر محفوظ طریقے سے آگے بھیجتا ہے۔</string>
+    <string name="section_target_auth">ہدف اور توثیق</string>
+    <string name="field_webhook_url">ویب ہک اینڈ پوائنٹ URL</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">توثیق کا طریقہ</string>
+    <string name="auth_none">کوئی نہیں</string>
+    <string name="auth_basic">بنیادی توثیق (Basic Auth)</string>
+    <string name="auth_bearer">بیئرر ٹوکن (Bearer Token)</string>
+    <string name="auth_custom">کسٹم ہیڈر (Custom Header)</string>
+    <string name="btn_change">تبدیل کریں</string>
+    <string name="btn_test_connection">کنکشن ٹیسٹ کریں</string>
+    <string name="btn_save_config">ترتیبات محفوظ کریں</string>
+    <string name="section_filtering_rules">پیغامات فلٹر کرنے کے قواعد</string>
+    <string name="field_sender_filter">ارسال کنندہ فلٹر</string>
+    <string name="all_senders_default">تمام ارسال کنندگان (ڈیفالٹ)</string>
+    <string name="dialog_select_senders">ارسال کنندگان منتخب کریں</string>
+    <string name="search_senders_placeholder">ارسال کنندہ تلاش یا درج کریں…</string>
+    <string name="action_add_sender">شامل کریں \"%1$s\"</string>
+    <string name="btn_done">مکمل</string>
+    <string name="field_keyword_filter">کلیدی الفاظ کا فلٹر (اختیاری)</string>
+    <string name="keyword_placeholder">تمام پیغامات کے لیے خالی چھوڑیں</string>
+    <string name="section_reliability">اعتبار اور پس منظر تسلسل</string>
+    <string name="setting_autostart_title">ڈیوائس بوٹ پر خودکار آغاز</string>
+    <string name="setting_autostart_desc">فون ری اسٹارٹ ہونے کے بعد سروس دوبارہ شروع کرتا ہے۔</string>
+    <string name="setting_sync_title">15 منٹ WorkManager ہم آہنگی</string>
+    <string name="setting_sync_desc">زیر التواء ریکارڈز کے لیے بیک اپ ورکر۔</string>
+    <string name="setting_battery_title">بیٹری آپٹیمائزیشن</string>
+    <string name="battery_exempted">استثنیٰ حاصل ہے (بہترین)</string>
+    <string name="battery_not_exempted">استثنیٰ نہیں ہے (معطل ہو سکتا ہے)</string>
+    <string name="btn_configure">کنفیگر کریں</string>
+    <string name="battery_completed">مکمل ہوا</string>
+    <string name="section_service_status">سروس کی حیثیت</string>
+    <string name="section_language">ایپ کی زبان / Language</string>
+    <string name="language_selector_title">زبان</string>
+    <string name="language_selector_sub">ایپلی کیشن کے لیے ڈسپلے زبان منتخب کریں</string>
+    <string name="system_default_language">سسٹم ڈیفالٹ</string>
+    <string name="dialog_tls_title">ویب ہک سیکیورٹی اور انکرپشن</string>
+    <string name="dialog_tls_desc">• HTTPS اینڈ پوائنٹس کے لیے سخت TLS 1.2+ لازمی ہے۔\n• پاس ورڈ اور ٹوکن Android Keystore (AES256-GCM) کے ذریعے محفوظ طریقے سے انکرپٹ ہیں۔</string>
+    <string name="btn_got_it">سمجھ گیا</string>
+    <string name="btn_cancel">منسوخ</string>
+    <string name="dialog_auth_basic_title">بنیادی توثیق کنفیگر کریں</string>
+    <string name="dialog_auth_bearer_title">بیئرر ٹوکن کنفیگر کریں</string>
+    <string name="dialog_auth_custom_title">کسٹم ہیڈرز کنفیگر کریں</string>
+    <string name="dialog_auth_default_title">توثیق کنفیگر کریں</string>
+    <string name="field_username">صارف کا نام</string>
+    <string name="field_password">پاس ورڈ</string>
+    <string name="field_leave_blank_clear">ختم کرنے کے لیے خالی چھوڑیں</string>
+    <string name="field_bearer_token">بیئرر ٹوکن</string>
+    <string name="label_custom_headers_array">کسٹم ہیڈرز کی فہرست:</string>
+    <string name="btn_add_header">ہیڈر شامل کریں</string>
+    <string name="auth_no_config_needed">اس توثیقی قسم کے لیے مزید ترتیبات درکار نہیں ہیں۔</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">SMS2API سروس پس منظر میں شروع ہو گئی</string>
+    <string name="snack_service_stopped">SMS2API سروس بند ہو گئی</string>
+    <string name="snack_queue_triggered">قطار کی ترسیل شروع ہو گئی</string>
+    <string name="snack_delivered_success">کامیابی سے بھیج دیا گیا</string>
+    <string name="snack_delivered_failed">ترسیل ناکام، قطار میں برقرار ہے</string>
+    <string name="snack_retry_failed_queued">%1$d ناکام پیغامات دوبارہ کوشش کے لیے شامل کر دیے گئے</string>
+    <string name="snack_queued_all_resend">تمام ریکارڈز دوبارہ ارسال کرنے کے لیے قطار میں لگ گئے</string>
+    <string name="snack_cleared_delivered">ترسیل شدہ تمام پیغامات صاف کر دیے گئے</string>
+    <string name="snack_cleared_all">تمام مقامی ریکارڈز صاف کر دیے گئے</string>
+    <string name="snack_historical_completed">درآمد مکمل: اسکین: %1$d | فلٹرڈ: %2$d | قطار: %3$d</string>
+    <string name="snack_historical_failed">ان باکس درآمد ناکام: %1$s</string>
+    <string name="snack_config_saved">ہدف اور توثیق کی ترتیبات محفوظ ہو گئیں</string>
+    <string name="conn_test_success">کامیابی! اینڈ پوائنٹ سے رابطہ ہو گیا (HTTP %1$d)</string>
+    <string name="conn_test_failed">ناکام: %1$s</string>
+</resources>

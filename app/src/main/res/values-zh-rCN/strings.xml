@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">短信转发服务</string>
+    <string name="channel_desc">捕获接收到的短信并转发到 REST API 的持久后台服务</string>
+    <string name="service_active_title">SMS2API 运行中</string>
+    <string name="service_active_desc">正在监控收到的短信并转发至 API</string>
+    <string name="service_active_status">服务已启动</string>
+    <string name="service_stopped_status">服务已停止</string>
+    <string name="service_active_sub">后台短信捕获已启用</string>
+    <string name="service_stopped_sub">开启以自动在后台捕获短信</string>
+    <string name="stop_service">停止服务</string>
+    <string name="service_messages_queued">%1$s • %2$d 条短信在队列中</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">仪表板</string>
+    <string name="nav_logs">日志与队列</string>
+    <string name="nav_logs_short">日志</string>
+    <string name="nav_settings">配置</string>
+    <string name="nav_settings_short">设置</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">队列与投递统计</string>
+    <string name="metric_matched">符合过滤规则</string>
+    <string name="metric_skipped">未匹配过滤</string>
+    <string name="metric_delivered">已成功送达</string>
+    <string name="metric_pending">等待发送</string>
+    <string name="metric_failed">发送失败</string>
+    <string name="metric_total">总计捕获</string>
+    <string name="section_actions">快捷操作</string>
+    <string name="action_sync_all_past">同步所有历史短信 (批量导入)</string>
+    <string name="action_scanning_inbox">正在扫描收件箱短信…</string>
+    <string name="action_resend_all">重发全部</string>
+    <string name="action_send_pending">发送待处理</string>
+    <string name="action_send_failed">重试失败短信</string>
+    <string name="action_test_api">测试 API</string>
+    <string name="action_testing">测试中…</string>
+    <string name="battery_opt_title">电池优化已开启</string>
+    <string name="battery_opt_desc">请允许后台运行以确保短信转发不中断。</string>
+    <string name="battery_opt_allow">允许</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">确认</string>
+    <string name="dialog_btn_no">取消</string>
+    <string name="dialog_sync_title">同步所有历史短信</string>
+    <string name="dialog_sync_desc">将扫描设备收件箱，并将所有符合过滤条件的历史短信批量导入发送队列。</string>
+    <string name="dialog_resend_all_title">重发所有记录</string>
+    <string name="dialog_resend_all_desc">将重置所有短信记录（已成功、等待中及失败）为等待状态，并重新进入队列。</string>
+    <string name="dialog_send_pending_title">发送队列中短信</string>
+    <string name="dialog_send_pending_desc">立即触发后台任务派发队列中所有待发送的短信。</string>
+    <string name="dialog_send_failed_title">重发失败短信</string>
+    <string name="dialog_send_failed_desc">将所有发送失败的短信重置为待发送状态并安排重试。</string>
+    <string name="dialog_test_api_title">测试 API 连接</string>
+    <string name="dialog_test_api_desc">将向配置的 Webhook 端点发送测试请求以验证网络连通性。</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">搜索发件人、内容或哈希…</string>
+    <string name="clear">清除</string>
+    <string name="filter_all">全部 (%1$d)</string>
+    <string name="filter_matched">符合规则 (%1$d)</string>
+    <string name="filter_skipped">未匹配 (%1$d)</string>
+    <string name="filter_success">成功 (%1$d)</string>
+    <string name="filter_pending">待发 (%1$d)</string>
+    <string name="filter_failed">失败 (%1$d)</string>
+    <string name="empty_logs_filtered">没有匹配过滤条件的短信记录。</string>
+    <string name="empty_logs_initial">暂无捕获的短信。</string>
+    <string name="dialog_send_record_title">发送至 API</string>
+    <string name="dialog_send_record_desc">您确定要将此短信（来自 %1$s）发送到 API 吗？</string>
+    <string name="badge_skipped">已跳过</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">已发送: %1$d 次</string>
+    <string name="action_send_to_api">发送至 API</string>
+    <string name="copy_message_id">复制 ID</string>
+    <string name="toast_copied">%1$s 已复制到剪贴板</string>
+    <string name="label_message_id">消息 ID</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API 转发器</string>
+    <string name="about_app_desc">自动化短信至 REST API 桥梁。即时捕获接收到的消息并安全地转发至目标服务器。</string>
+    <string name="section_target_auth">目标与身份验证</string>
+    <string name="field_webhook_url">Webhook 端点 URL</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">认证方式</string>
+    <string name="auth_none">无</string>
+    <string name="auth_basic">Basic Auth 基础认证</string>
+    <string name="auth_bearer">Bearer 令牌</string>
+    <string name="auth_custom">自定义请求头 (Custom Header)</string>
+    <string name="btn_change">更改</string>
+    <string name="btn_test_connection">测试连接</string>
+    <string name="btn_save_config">保存配置</string>
+    <string name="section_filtering_rules">短信过滤规则</string>
+    <string name="field_sender_filter">发件人过滤</string>
+    <string name="all_senders_default">所有发件人 (默认)</string>
+    <string name="dialog_select_senders">选择发件人</string>
+    <string name="search_senders_placeholder">搜索或输入发件人…</string>
+    <string name="action_add_sender">添加发件人 \"%1$s\"</string>
+    <string name="btn_done">完成</string>
+    <string name="field_keyword_filter">关键字过滤 (可选)</string>
+    <string name="keyword_placeholder">留空以匹配任意内容</string>
+    <string name="section_reliability">可靠性与后台保活</string>
+    <string name="setting_autostart_title">开机自启动</string>
+    <string name="setting_autostart_desc">设备重启后自动拉起转发服务。</string>
+    <string name="setting_sync_title">15 分钟 WorkManager 同步</string>
+    <string name="setting_sync_desc">针对等待中记录的周期性备用后台任务。</string>
+    <string name="setting_battery_title">电池优化</string>
+    <string name="battery_exempted">已豁免 (最佳状态)</string>
+    <string name="battery_not_exempted">未豁免 (可能被系统挂起)</string>
+    <string name="btn_configure">配置</string>
+    <string name="battery_completed">已完成</string>
+    <string name="section_service_status">服务状态</string>
+    <string name="section_language">应用语言 / Language</string>
+    <string name="language_selector_title">显示语言</string>
+    <string name="language_selector_sub">选择应用程序的界面语言</string>
+    <string name="system_default_language">跟随系统默认</string>
+    <string name="dialog_tls_title">Webhook 安全与加密</string>
+    <string name="dialog_tls_desc">• HTTPS 必须强制使用 TLS 1.2+ 加密。\n• 密码与令牌已通过 Android Keystore (AES256-GCM) 安全存储。</string>
+    <string name="btn_got_it">我知道了</string>
+    <string name="btn_cancel">取消</string>
+    <string name="dialog_auth_basic_title">配置 Basic Auth 基础认证</string>
+    <string name="dialog_auth_bearer_title">配置 Bearer 令牌</string>
+    <string name="dialog_auth_custom_title">配置自定义请求头</string>
+    <string name="dialog_auth_default_title">配置身份验证</string>
+    <string name="field_username">用户名</string>
+    <string name="field_password">密码</string>
+    <string name="field_leave_blank_clear">留空以清除</string>
+    <string name="field_bearer_token">Bearer Token</string>
+    <string name="label_custom_headers_array">自定义请求头列表:</string>
+    <string name="btn_add_header">添加请求头</string>
+    <string name="auth_no_config_needed">此认证方式无需额外配置。</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">SMS2API 前台服务已启动</string>
+    <string name="snack_service_stopped">SMS2API 服务已停止</string>
+    <string name="snack_queue_triggered">已触发队列发送</string>
+    <string name="snack_delivered_success">已成功送达</string>
+    <string name="snack_delivered_failed">发送失败，继续在队列中保留</string>
+    <string name="snack_retry_failed_queued">已将 %1$d 条失败消息加入重试队列</string>
+    <string name="snack_queued_all_resend">已将所有记录重新加入发送队列</string>
+    <string name="snack_cleared_delivered">已清除所有已送达记录</string>
+    <string name="snack_cleared_all">已清除所有本地记录</string>
+    <string name="snack_historical_completed">历史同步完成: 扫描: %1$d | 匹配: %2$d | 入队: %3$d</string>
+    <string name="snack_historical_failed">导入收件箱失败: %1$s</string>
+    <string name="snack_config_saved">目标与认证配置已保存</string>
+    <string name="conn_test_success">成功！端点正常连通 (HTTP %1$d)</string>
+    <string name="conn_test_failed">失败: %1$s</string>
+</resources>

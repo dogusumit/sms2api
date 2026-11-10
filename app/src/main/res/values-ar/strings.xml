@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">خدمة إعادة توجيه الرسائل القصيرة</string>
+    <string name="channel_desc">خدمة خلفية دائمة لالتقاط رسائل SMS الواردة وإعادة توجيهها إلى REST API</string>
+    <string name="service_active_title">SMS2API نشط</string>
+    <string name="service_active_desc">مراقبة الرسائل القصيرة الواردة وإعادة توجيهها إلى API</string>
+    <string name="service_active_status">الخدمة نشطة</string>
+    <string name="service_stopped_status">الخدمة متوقفة</string>
+    <string name="service_active_sub">التقاط الرسائل في الخلفية قيد التشغيل</string>
+    <string name="service_stopped_sub">قم بالتشغيل للالتقاط التلقائي في الخلفية</string>
+    <string name="stop_service">إيقاف الخدمة</string>
+    <string name="service_messages_queued">%1$s • %2$d رسالة في قائمة الانتظار</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">لوحة التحكم</string>
+    <string name="nav_logs">السجلات وقائمة الانتظار</string>
+    <string name="nav_logs_short">السجلات</string>
+    <string name="nav_settings">التكوين</string>
+    <string name="nav_settings_short">الإعدادات</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">مقاييس قائمة الانتظار والتسليم</string>
+    <string name="metric_matched">مطابق للمرشح</string>
+    <string name="metric_skipped">غير مطابق للمرشح</string>
+    <string name="metric_delivered">تم التسليم</string>
+    <string name="metric_pending">قيد الانتظار</string>
+    <string name="metric_failed">فشل</string>
+    <string name="metric_total">إجمالي الملتقط</string>
+    <string name="section_actions">الإجراءات التشغيلية</string>
+    <string name="action_sync_all_past">مزامنة الرسائل السابقة (استيراد جماعي)</string>
+    <string name="action_scanning_inbox">جارٍ فحص رسائل صندوق الوارد…</string>
+    <string name="action_resend_all">إعادة إرسال الكل</string>
+    <string name="action_send_pending">إرسال المعلق</string>
+    <string name="action_send_failed">إعادة إرسال الفاشل</string>
+    <string name="action_test_api">اختبار API</string>
+    <string name="action_testing">جارٍ الاختبار…</string>
+    <string name="battery_opt_title">تحسين البطارية ممكّن</string>
+    <string name="battery_opt_desc">يرجى السماح بالتشغيل في الخلفية لضمان عدم انقطاع توجيه الرسائل.</string>
+    <string name="battery_opt_allow">سماح</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">نعم</string>
+    <string name="dialog_btn_no">لا</string>
+    <string name="dialog_sync_title">مزامنة جميع الرسائل السابقة</string>
+    <string name="dialog_sync_desc">سيؤدي هذا إلى فحص صندوق الوارد بجهازك واستيراد جميع رسائل SMS السابقة المطابقة لمرشحاتك إلى قائمة الانتظار.</string>
+    <string name="dialog_resend_all_title">إعادة إرسال جميع السجلات</string>
+    <string name="dialog_resend_all_desc">سيؤدي هذا إلى إعادة ضبط جميع السجلات (المسلمة والمعلقة والفاشلة) إلى معلقة وإدراجها للإرسال مجدداً.</string>
+    <string name="dialog_send_pending_title">إرسال قائمة الانتظار</string>
+    <string name="dialog_send_pending_desc">سيؤدي هذا فوراً إلى تشغيل خدمة الخلفية لإرسال كافة رسائل SMS المعلقة في القائمة.</string>
+    <string name="dialog_send_failed_title">إرسال الرسائل الفاشلة</string>
+    <string name="dialog_send_failed_desc">سيؤدي هذا إلى إعادة ضبط محاولات التسليم الفاشلة إلى معلقة وجدولتها لإعادة المحاولة.</string>
+    <string name="dialog_test_api_title">اختبار اتصال API</string>
+    <string name="dialog_test_api_desc">سيتم إرسال طلب اختبار ping إلى عنوان webhook المكوّن للتحقق من الاتصال.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">بحث عن المرسل أو النص أو المعرف…</string>
+    <string name="clear">مسح</string>
+    <string name="filter_all">الكل (%1$d)</string>
+    <string name="filter_matched">مطابق (%1$d)</string>
+    <string name="filter_skipped">مستبعد (%1$d)</string>
+    <string name="filter_success">ناجح (%1$d)</string>
+    <string name="filter_pending">معلق (%1$d)</string>
+    <string name="filter_failed">فاشل (%1$d)</string>
+    <string name="empty_logs_filtered">لا توجد سجلات SMS تطابق معايير التصفية الخاصة بك.</string>
+    <string name="empty_logs_initial">لم يتم التقاط أي رسائل قصيرة بعد.</string>
+    <string name="dialog_send_record_title">إرسال إلى API</string>
+    <string name="dialog_send_record_desc">هل أنت متأكد أنك تريد إرسال هذه الرسالة (من %1$s) إلى API؟</string>
+    <string name="badge_skipped">تم التخطي</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">تم الإرسال: %1$d مرة</string>
+    <string name="action_send_to_api">إرسال إلى API</string>
+    <string name="copy_message_id">نسخ المعرف</string>
+    <string name="toast_copied">تم نسخ %1$s إلى الحافظة</string>
+    <string name="label_message_id">معرف الرسالة</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">إعادة توجيه SMS2API</string>
+    <string name="about_app_desc">جسر آلي من رسائل SMS إلى REST API. يلتقط الرسائل الواردة فوراً ويعيد توجيهها بأمان.</string>
+    <string name="section_target_auth">الهدف والمصادقة</string>
+    <string name="field_webhook_url">عنوان نقطة نهاية Webhook</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">طريقة المصادقة</string>
+    <string name="auth_none">بدون</string>
+    <string name="auth_basic">مصادقة أساسية (Basic Auth)</string>
+    <string name="auth_bearer">رمز حامل (Bearer Token)</string>
+    <string name="auth_custom">رأس مخصص (Custom Header)</string>
+    <string name="btn_change">تغيير</string>
+    <string name="btn_test_connection">اختبار الاتصال</string>
+    <string name="btn_save_config">حفظ الإعدادات</string>
+    <string name="section_filtering_rules">قواعد تصفية الرسائل</string>
+    <string name="field_sender_filter">تصفية المرسل</string>
+    <string name="all_senders_default">جميع المرسلين (افتراضي)</string>
+    <string name="dialog_select_senders">تحديد المرسلين</string>
+    <string name="search_senders_placeholder">ابحث أو اكتب اسم المرسل…</string>
+    <string name="action_add_sender">إضافة المرسل \"%1$s\"</string>
+    <string name="btn_done">تم</string>
+    <string name="field_keyword_filter">تصفية بالكلمات المفتاحية (اختياري)</string>
+    <string name="keyword_placeholder">اتركه فارغاً لأي نص</string>
+    <string name="section_reliability">الموثوقية واستمرارية النظام</string>
+    <string name="setting_autostart_title">بدء تلقائي عند تشغيل الجهاز</string>
+    <string name="setting_autostart_desc">إعادة تشغيل الخدمة تلقائياً بعد إعادة تشغيل الهاتف.</string>
+    <string name="setting_sync_title">مزامنة WorkManager كل 15 دقيقة</string>
+    <string name="setting_sync_desc">مهمة خلفية دورية احتياطية للسجلات المعلقة.</string>
+    <string name="setting_battery_title">تحسين البطارية</string>
+    <string name="battery_exempted">مستثنى (الأداء الأفضل)</string>
+    <string name="battery_not_exempted">غير مستثنى (قد يتم تعليقه)</string>
+    <string name="btn_configure">تهيئة</string>
+    <string name="battery_completed">مكتمل</string>
+    <string name="section_service_status">حالة الخدمة</string>
+    <string name="section_language">لغة التطبيق / Language</string>
+    <string name="language_selector_title">اللغة</string>
+    <string name="language_selector_sub">اختر لغة عرض واجهة التطبيق</string>
+    <string name="system_default_language">الافتراضي للنظام</string>
+    <string name="dialog_tls_title">أمان وتشفير Webhook</string>
+    <string name="dialog_tls_desc">• تشفير TLS 1.2+ إلزامي لجميع روابط HTTPS.\n• يتم تشفير بيانات الاعتماد والرموز بأمان عبر Android Keystore (AES256-GCM).</string>
+    <string name="btn_got_it">فهمت</string>
+    <string name="btn_cancel">إلغاء</string>
+    <string name="dialog_auth_basic_title">تهيئة المصادقة الأساسية</string>
+    <string name="dialog_auth_bearer_title">تهيئة رمز Bearer</string>
+    <string name="dialog_auth_custom_title">تهيئة الرؤوس المخصصة</string>
+    <string name="dialog_auth_default_title">تهيئة المصادقة</string>
+    <string name="field_username">اسم المستخدم</string>
+    <string name="field_password">كلمة المرور</string>
+    <string name="field_leave_blank_clear">اتركه فارغاً للمسح</string>
+    <string name="field_bearer_token">رمز Bearer</string>
+    <string name="label_custom_headers_array">قائمة الرؤوس المخصصة:</string>
+    <string name="btn_add_header">إضافة رأس</string>
+    <string name="auth_no_config_needed">لا يلزم تكوين إضافي لنوع المصادقة هذا.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">تم بدء خدمة SMS2API في الواجهة</string>
+    <string name="snack_service_stopped">تم إيقاف خدمة SMS2API</string>
+    <string name="snack_queue_triggered">تم إطلاق إرسال قائمة الانتظار</string>
+    <string name="snack_delivered_success">تم التسليم بنجاح</string>
+    <string name="snack_delivered_failed">فشل التسليم، تبقى في قائمة الانتظار</string>
+    <string name="snack_retry_failed_queued">تم إدراج %1$d رسالة فاشلة لإعادة المحاولة</string>
+    <string name="snack_queued_all_resend">تمت جدولة جميع السجلات لإعادة الإرسال</string>
+    <string name="snack_cleared_delivered">تم مسح جميع السجلات المسلمة</string>
+    <string name="snack_cleared_all">تم مسح جميع السجلات المحلية</string>
+    <string name="snack_historical_completed">اكتمل الاستيراد: فحص: %1$d | مطابق: %2$d | في الانتظار: %3$d</string>
+    <string name="snack_historical_failed">فشل استيراد صندوق الوارد: %1$s</string>
+    <string name="snack_config_saved">تم حفظ إعدادات الهدف والمصادقة بنجاح</string>
+    <string name="conn_test_success">نجاح! نقطة النهاية متاحة (HTTP %1$d)</string>
+    <string name="conn_test_failed">فشل: %1$s</string>
+</resources>

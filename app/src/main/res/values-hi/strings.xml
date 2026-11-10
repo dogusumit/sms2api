@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">एसएमएस फ़ॉरवर्डर सेवा</string>
+    <string name="channel_desc">प्राप्त एसएमएस संदेशों को पकड़कर REST API पर अग्रेषित करने वाली पृष्ठभूमि सेवा</string>
+    <string name="service_active_title">SMS2API सक्रिय है</string>
+    <string name="service_active_desc">आने वाले एसएमएस की निगरानी और एपीआई पर अग्रेषण जारी है</string>
+    <string name="service_active_status">सेवा सक्रिय है</string>
+    <string name="service_stopped_status">सेवा बंद है</string>
+    <string name="service_active_sub">बैकग्राउंड एसएमएस कैप्चर चालू है</string>
+    <string name="service_stopped_sub">स्वचालित कैप्चर शुरू करने के लिए चालू करें</string>
+    <string name="stop_service">सेवा रोकें</string>
+    <string name="service_messages_queued">%1$s • %2$d संदेश कतार में हैं</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">डैशबोर्ड</string>
+    <string name="nav_logs">लॉग और कतार</string>
+    <string name="nav_logs_short">लॉग</string>
+    <string name="nav_settings">कॉन्फ़िगरेशन</string>
+    <string name="nav_settings_short">सेटिंग्स</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">कतार और डिलीवरी आंकड़े</string>
+    <string name="metric_matched">फ़िल्टर मेल खाया</string>
+    <string name="metric_skipped">फ़िल्टर मेल नहीं खाया</string>
+    <string name="metric_delivered">वितरित</string>
+    <string name="metric_pending">लंबित</string>
+    <string name="metric_failed">विफल</string>
+    <string name="metric_total">कुल प्राप्त</string>
+    <string name="section_actions">त्वरित कार्रवाइयां</string>
+    <string name="action_sync_all_past">सभी पुराने एसएमएस सिंक करें (थोक आयात)</string>
+    <string name="action_scanning_inbox">संदेश स्कैन किए जा रहे हैं…</string>
+    <string name="action_resend_all">सभी पुनः भेजें</string>
+    <string name="action_send_pending">लंबित भेजें</string>
+    <string name="action_send_failed">विफल भेजें</string>
+    <string name="action_test_api">API का परीक्षण करें</string>
+    <string name="action_testing">परीक्षण जारी है…</string>
+    <string name="battery_opt_title">बैटरी अनुकूलन सक्षम है</string>
+    <string name="battery_opt_desc">निर्बाध एसएमएस अग्रेषण के लिए पृष्ठभूमि निष्पादन की अनुमति दें।</string>
+    <string name="battery_opt_allow">अनुमति दें</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">हाँ</string>
+    <string name="dialog_btn_no">नहीं</string>
+    <string name="dialog_sync_title">सभी पुराने एसएमएस सिंक करें</string>
+    <string name="dialog_sync_desc">यह आपके इनबॉक्स को स्कैन करेगा और फ़िल्टर के अनुसार सभी पुराने संदेशों को कतार में जोड़ देगा।</string>
+    <string name="dialog_resend_all_title">सभी रिकॉर्ड पुनः भेजें</string>
+    <string name="dialog_resend_all_desc">यह सभी रिकॉर्ड (वितरित, लंबित और विफल) को लंबित में बदलकर पुनः भेजने के लिए कतारबद्ध करेगा।</string>
+    <string name="dialog_send_pending_title">लंबित कतार भेजें</string>
+    <string name="dialog_send_pending_desc">यह कतार में मौजूद सभी लंबित एसएमएस तुरंत भेजने के लिए बैकग्राउंड वर्कर को सक्रिय करेगा।</string>
+    <string name="dialog_send_failed_title">विफल संदेश भेजें</string>
+    <string name="dialog_send_failed_desc">यह सभी विफल संदेशों को फिर से लंबित में बदलकर पुनः प्रयास के लिए शेड्यूल करेगा।</string>
+    <string name="dialog_test_api_title">API कनेक्शन का परीक्षण करें</string>
+    <string name="dialog_test_api_desc">यह कनेक्टिविटी सत्यापित करने के लिए कॉन्फ़िगर किए गए वेबहुक एंडपॉइंट पर पिंग भेजेगा।</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">प्रेषक, संदेश या हैश खोजें…</string>
+    <string name="clear">साफ़ करें</string>
+    <string name="filter_all">सभी (%1$d)</string>
+    <string name="filter_matched">फ़िल्टर मेल (%1$d)</string>
+    <string name="filter_skipped">फ़िल्टर नहीं (%1$d)</string>
+    <string name="filter_success">सफल (%1$d)</string>
+    <string name="filter_pending">लंबित (%1$d)</string>
+    <string name="filter_failed">विफल (%1$d)</string>
+    <string name="empty_logs_filtered">फ़िल्टर के अनुसार कोई एसएमएस रिकॉर्ड नहीं मिला।</string>
+    <string name="empty_logs_initial">अभी तक कोई एसएमएस संदेश नहीं मिला।</string>
+    <string name="dialog_send_record_title">API पर भेजें</string>
+    <string name="dialog_send_record_desc">क्या आप वाकई यह संदेश (%1$s से) API पर भेजना चाहते हैं?</string>
+    <string name="badge_skipped">छोड़ा गया</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">भेजा गया: %1$d बार</string>
+    <string name="action_send_to_api">API पर भेजें</string>
+    <string name="copy_message_id">ID कॉपी करें</string>
+    <string name="toast_copied">%1$s क्लिपबोर्ड पर कॉपी किया गया</string>
+    <string name="label_message_id">संदेश ID</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API फ़ॉरवर्डर</string>
+    <string name="about_app_desc">स्वचालित एसएमएस से REST API सेतु। आने वाले संदेशों को तुरंत कैप्चर करता है और सुरक्षित रूप से भेजता है।</string>
+    <string name="section_target_auth">लक्ष्य और प्रमाणीकरण</string>
+    <string name="field_webhook_url">वेबहुक एंडपॉइंट URL</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">प्रमाणीकरण विधि</string>
+    <string name="auth_none">कोई नहीं</string>
+    <string name="auth_basic">बेसिक ऑथ</string>
+    <string name="auth_bearer">बेयरर टोकन</string>
+    <string name="auth_custom">कस्टम हेडर</string>
+    <string name="btn_change">बदलें</string>
+    <string name="btn_test_connection">कनेक्शन परीक्षण</string>
+    <string name="btn_save_config">कॉन्फ़िग सहेजें</string>
+    <string name="section_filtering_rules">एसएमएस फ़िल्टर नियम</string>
+    <string name="field_sender_filter">प्रेषक फ़िल्टर</string>
+    <string name="all_senders_default">सभी प्रेषक (डिफ़ॉल्ट)</string>
+    <string name="dialog_select_senders">प्रेषक चुनें</string>
+    <string name="search_senders_placeholder">प्रेषक खोजें या लिखें…</string>
+    <string name="action_add_sender">प्रेषक जोड़ें \"%1$s\"</string>
+    <string name="btn_done">पूर्ण</string>
+    <string name="field_keyword_filter">कीवर्ड फ़िल्टर (वैकल्पिक)</string>
+    <string name="keyword_placeholder">सभी संदेशों के लिए रिक्त छोड़ें</string>
+    <string name="section_reliability">विश्वसनीयता और बैकग्राउंड निष्पादन</string>
+    <string name="setting_autostart_title">डिवाइस बूट पर स्वतः प्रारंभ</string>
+    <string name="setting_autostart_desc">फ़ोन रीस्टार्ट होने पर सेवा पुनः शुरू करता है।</string>
+    <string name="setting_sync_title">15-मिनट WorkManager सिंक</string>
+    <string name="setting_sync_desc">लंबित रिकॉर्ड्स के लिए आवधिक बैकअप कार्यकर्ता।</string>
+    <string name="setting_battery_title">बैटरी अनुकूलन</string>
+    <string name="battery_exempted">छूट प्राप्त (सर्वोत्तम)</string>
+    <string name="battery_not_exempted">छूट नहीं (रोका जा सकता है)</string>
+    <string name="btn_configure">कॉन्फ़िगर करें</string>
+    <string name="battery_completed">पूर्ण हुआ</string>
+    <string name="section_service_status">सेवा की स्थिति</string>
+    <string name="section_language">ऐप भाषा / Language</string>
+    <string name="language_selector_title">भाषा</string>
+    <string name="language_selector_sub">एप्लिकेशन की प्रदर्शन भाषा चुनें</string>
+    <string name="system_default_language">सिस्टम डिफ़ॉल्ट</string>
+    <string name="dialog_tls_title">वेबहुक सुरक्षा और एन्क्रिप्शन</string>
+    <string name="dialog_tls_desc">• HTTPS एंडपॉइंट्स के लिए TLS 1.2+ अनिवार्य है।\n• क्रेडेंशियल्स Android Keystore (AES256-GCM) के साथ सुरक्षित रूप से एन्क्रिप्ट किए जाते हैं।</string>
+    <string name="btn_got_it">समझ गया</string>
+    <string name="btn_cancel">रद्द करें</string>
+    <string name="dialog_auth_basic_title">बेसिक ऑथ कॉन्फ़िगर करें</string>
+    <string name="dialog_auth_bearer_title">बेयरर टोकन कॉन्फ़िगर करें</string>
+    <string name="dialog_auth_custom_title">कस्टम हेडर कॉन्फ़िगर करें</string>
+    <string name="dialog_auth_default_title">प्रमाणीकरण कॉन्फ़िगर करें</string>
+    <string name="field_username">उपयोगकर्ता नाम</string>
+    <string name="field_password">पासवर्ड</string>
+    <string name="field_leave_blank_clear">हटाने के लिए रिक्त छोड़ें</string>
+    <string name="field_bearer_token">बेयरर टोकन</string>
+    <string name="label_custom_headers_array">कस्टम हेडर सूची:</string>
+    <string name="btn_add_header">हेडर जोड़ें</string>
+    <string name="auth_no_config_needed">इस प्रमाणीकरण प्रकार के लिए कोई अतिरिक्त कॉन्फ़िगरेशन आवश्यक नहीं है।</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">SMS2API सेवा बैकग्राउंड में प्रारंभ हो गई</string>
+    <string name="snack_service_stopped">SMS2API सेवा बंद कर दी गई</string>
+    <string name="snack_queue_triggered">कतार डिलीवरी सक्रिय की गई</string>
+    <string name="snack_delivered_success">सफलतापूर्वक वितरित किया गया</string>
+    <string name="snack_delivered_failed">डिलीवरी विफल, कतार में रहेगा</string>
+    <string name="snack_retry_failed_queued">%1$d विफल संदेश पुनः प्रयास के लिए कतारबद्ध किए गए</string>
+    <string name="snack_queued_all_resend">सभी रिकॉर्ड पुनः भेजने के लिए कतारबद्ध किए गए</string>
+    <string name="snack_cleared_delivered">सभी वितरित रिकॉर्ड साफ़ किए गए</string>
+    <string name="snack_cleared_all">सभी स्थानीय रिकॉर्ड साफ़ किए गए</string>
+    <string name="snack_historical_completed">आयात पूर्ण: स्कैन: %1$d | मेल: %2$d | कतारबद्ध: %3$d</string>
+    <string name="snack_historical_failed">इनबॉक्स आयात विफल: %1$s</string>
+    <string name="snack_config_saved">लक्ष्य और ऑथ सेटिंग्स सहेजी गईं</string>
+    <string name="conn_test_success">सफलता! एंडपॉइंट से जुड़ा (HTTP %1$d)</string>
+    <string name="conn_test_failed">विफल: %1$s</string>
+</resources>

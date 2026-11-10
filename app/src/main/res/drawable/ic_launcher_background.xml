@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Deep Space Midnight Base Layer -->
+    <path
+        android:fillColor="#0B0F19"
+        android:pathData="M 0,0 H 108 V 108 H 0 Z" />
+
+    <!-- Center Slate Radial Plate -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M 12,12 H 96 V 96 H 12 Z" />
+
+    <!-- Ambient Indigo Glow -->
+    <path
+        android:fillColor="#1E1B4B"
+        android:pathData="M 54,18 A 36,36 0 1,0 54,90 A 36,36 0 1,0 54,18 Z" />
+
+    <!-- Tech Coordinate Matrix / Concentric Network Grid -->
+    <path
+        android:strokeColor="#1E293B"
+        android:strokeWidth="1.2"
+        android:pathData="M 54,14 A 40,40 0 1,0 54,94 A 40,40 0 1,0 54,14 Z" />
+    <path
+        android:strokeColor="#312E81"
+        android:strokeWidth="0.8"
+        android:pathData="M 54,26 A 28,28 0 1,0 54,82 A 28,28 0 1,0 54,26 Z" />
+    <path
+        android:strokeColor="#1E293B"
+        android:strokeWidth="0.8"
+        android:pathData="M 18,54 H 90" />
+    <path
+        android:strokeColor="#1E293B"
+        android:strokeWidth="0.8"
+        android:pathData="M 54,18 V 90" />
+</vector>

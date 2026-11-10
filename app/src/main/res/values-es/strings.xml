@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">Servicio de reenvío de SMS</string>
+    <string name="channel_desc">Servicio persistente en segundo plano que captura y reenvía mensajes SMS a la API REST</string>
+    <string name="service_active_title">SMS2API Activo</string>
+    <string name="service_active_desc">Supervisando SMS entrantes y reenviando a la API</string>
+    <string name="service_active_status">Servicio activo</string>
+    <string name="service_stopped_status">Servicio detenido</string>
+    <string name="service_active_sub">La captura de SMS en segundo plano está activa</string>
+    <string name="service_stopped_sub">Activar para captura automática en segundo plano</string>
+    <string name="stop_service">Detener servicio</string>
+    <string name="service_messages_queued">%1$s • %2$d mensaje(s) en cola</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Panel</string>
+    <string name="nav_logs">Registros y Cola</string>
+    <string name="nav_logs_short">Registros</string>
+    <string name="nav_settings">Configuración</string>
+    <string name="nav_settings_short">Ajustes</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">Métricas de cola y entrega</string>
+    <string name="metric_matched">Coincide con filtro</string>
+    <string name="metric_skipped">No coincide con filtro</string>
+    <string name="metric_delivered">Entregados</string>
+    <string name="metric_pending">Pendientes</string>
+    <string name="metric_failed">Fallidos</string>
+    <string name="metric_total">Total capturados</string>
+    <string name="section_actions">Acciones operativas</string>
+    <string name="action_sync_all_past">Sincronizar SMS anteriores (Importación masiva)</string>
+    <string name="action_scanning_inbox">Escaneando mensajes entrantes…</string>
+    <string name="action_resend_all">Reenviar todos</string>
+    <string name="action_send_pending">Enviar pendientes</string>
+    <string name="action_send_failed">Reintentar fallidos</string>
+    <string name="action_test_api">Probar API</string>
+    <string name="action_testing">Probando…</string>
+    <string name="battery_opt_title">Optimización de batería activada</string>
+    <string name="battery_opt_desc">Permita la ejecución en segundo plano para reenviar SMS sin interrupciones.</string>
+    <string name="battery_opt_allow">Permitir</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">Sí</string>
+    <string name="dialog_btn_no">No</string>
+    <string name="dialog_sync_title">Sincronizar todos los SMS anteriores</string>
+    <string name="dialog_sync_desc">Esto escaneará la bandeja de entrada del dispositivo e importará a la cola todos los SMS anteriores que coincidan con sus filtros.</string>
+    <string name="dialog_resend_all_title">Reenviar todos los registros</string>
+    <string name="dialog_resend_all_desc">Restablecerá todos los registros SMS (entregados, pendientes y fallidos) a pendientes y los pondrá en cola.</string>
+    <string name="dialog_send_pending_title">Enviar cola pendiente</string>
+    <string name="dialog_send_pending_desc">Activará de inmediato el servicio en segundo plano para enviar todos los SMS pendientes en cola.</string>
+    <string name="dialog_send_failed_title">Enviar mensajes fallidos</string>
+    <string name="dialog_send_failed_desc">Restablecerá todos los intentos fallidos de entrega de SMS a pendientes y programará su reintento.</string>
+    <string name="dialog_test_api_title">Probar conexión con API</string>
+    <string name="dialog_test_api_desc">Enviará una solicitud ping de prueba a la URL del webhook configurada para verificar la conectividad.</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">Buscar remitente, cuerpo o hash…</string>
+    <string name="clear">Borrar</string>
+    <string name="filter_all">Todos (%1$d)</string>
+    <string name="filter_matched">Coincidentes (%1$d)</string>
+    <string name="filter_skipped">Omitidos (%1$d)</string>
+    <string name="filter_success">Exitosos (%1$d)</string>
+    <string name="filter_pending">Pendientes (%1$d)</string>
+    <string name="filter_failed">Fallidos (%1$d)</string>
+    <string name="empty_logs_filtered">No hay registros de SMS que coincidan con los filtros.</string>
+    <string name="empty_logs_initial">Aún no se ha capturado ningún mensaje SMS.</string>
+    <string name="dialog_send_record_title">Enviar a la API</string>
+    <string name="dialog_send_record_desc">¿Está seguro de que desea enviar este mensaje (de %1$s) a la API?</string>
+    <string name="badge_skipped">OMITIDO</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">Enviado: %1$d vez/veces</string>
+    <string name="action_send_to_api">Enviar a la API</string>
+    <string name="copy_message_id">Copiar ID</string>
+    <string name="toast_copied">%1$s copiado al portapapeles</string>
+    <string name="label_message_id">ID del mensaje</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">Reenviador SMS2API</string>
+    <string name="about_app_desc">Puente automatizado de SMS a REST API. Captura mensajes entrantes al instante y los reenvía de forma segura.</string>
+    <string name="section_target_auth">Destino y autenticación</string>
+    <string name="field_webhook_url">URL del endpoint de webhook</string>
+    <string name="field_webhook_placeholder">https://api.sudominio.com/v1/sms/webhook</string>
+    <string name="field_auth_method">Método de autenticación</string>
+    <string name="auth_none">Ninguno</string>
+    <string name="auth_basic">Autenticación básica (Basic Auth)</string>
+    <string name="auth_bearer">Token Bearer</string>
+    <string name="auth_custom">Encabezado personalizado (Custom Header)</string>
+    <string name="btn_change">Cambiar</string>
+    <string name="btn_test_connection">Probar conexión</string>
+    <string name="btn_save_config">Guardar configuración</string>
+    <string name="section_filtering_rules">Reglas de filtrado de SMS</string>
+    <string name="field_sender_filter">Filtro de remitente</string>
+    <string name="all_senders_default">Todos los remitentes (Predeterminado)</string>
+    <string name="dialog_select_senders">Seleccionar remitentes</string>
+    <string name="search_senders_placeholder">Buscar o escribir remitente…</string>
+    <string name="action_add_sender">Agregar remitente \"%1$s\"</string>
+    <string name="btn_done">Listo</string>
+    <string name="field_keyword_filter">Filtro por palabra clave (Opcional)</string>
+    <string name="keyword_placeholder">Dejar en blanco para cualquier texto</string>
+    <string name="section_reliability">Confiabilidad y persistencia en SO</string>
+    <string name="setting_autostart_title">Inicio automático al encender el dispositivo</string>
+    <string name="setting_autostart_desc">Reinicia el servicio tras reiniciar el teléfono.</string>
+    <string name="setting_sync_title">Sincronización WorkManager cada 15 min</string>
+    <string name="setting_sync_desc">Tarea de respaldo periódica para registros pendientes.</string>
+    <string name="setting_battery_title">Optimización de batería</string>
+    <string name="battery_exempted">Exento (Óptimo)</string>
+    <string name="battery_not_exempted">No exento (Puede suspenderse)</string>
+    <string name="btn_configure">Configurar</string>
+    <string name="battery_completed">Completado</string>
+    <string name="section_service_status">Estado del servicio</string>
+    <string name="section_language">Idioma de la aplicación / Language</string>
+    <string name="language_selector_title">Idioma</string>
+    <string name="language_selector_sub">Elija el idioma de visualización de la app</string>
+    <string name="system_default_language">Predeterminado del sistema</string>
+    <string name="dialog_tls_title">Seguridad y cifrado de Webhook</string>
+    <string name="dialog_tls_desc">• Obligatorio TLS 1.2+ estricto para extremos HTTPS.\n• Las credenciales y tokens se cifran de forma segura con Android Keystore (AES256-GCM).</string>
+    <string name="btn_got_it">Entendido</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="dialog_auth_basic_title">Configurar Basic Auth</string>
+    <string name="dialog_auth_bearer_title">Configurar Token Bearer</string>
+    <string name="dialog_auth_custom_title">Configurar encabezados personalizados</string>
+    <string name="dialog_auth_default_title">Configurar autenticación</string>
+    <string name="field_username">Usuario</string>
+    <string name="field_password">Contraseña</string>
+    <string name="field_leave_blank_clear">Dejar en blanco para borrar</string>
+    <string name="field_bearer_token">Token Bearer</string>
+    <string name="label_custom_headers_array">Lista de encabezados personalizados:</string>
+    <string name="btn_add_header">Agregar encabezado</string>
+    <string name="auth_no_config_needed">No se requiere configuración adicional para este tipo de autenticación.</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">Servicio SMS2API iniciado en primer plano</string>
+    <string name="snack_service_stopped">Servicio SMS2API detenido</string>
+    <string name="snack_queue_triggered">Envío de cola iniciado</string>
+    <string name="snack_delivered_success">Entregado exitosamente</string>
+    <string name="snack_delivered_failed">Error en entrega, permanece en cola</string>
+    <string name="snack_retry_failed_queued">%1$d mensaje(s) fallido(s) en cola para reintento</string>
+    <string name="snack_queued_all_resend">Todos los registros puestos en cola para reenvío</string>
+    <string name="snack_cleared_delivered">Todos los registros entregados han sido eliminados</string>
+    <string name="snack_cleared_all">Todos los registros locales han sido eliminados</string>
+    <string name="snack_historical_completed">Importación completada: Escaneados: %1$d | Coincidentes: %2$d | En cola: %3$d</string>
+    <string name="snack_historical_failed">Error al importar buzón: %1$s</string>
+    <string name="snack_config_saved">Configuración de destino y autenticación guardada</string>
+    <string name="conn_test_success">¡Éxito! Extremo accesible (HTTP %1$d)</string>
+    <string name="conn_test_failed">Falló: %1$s</string>
+</resources>

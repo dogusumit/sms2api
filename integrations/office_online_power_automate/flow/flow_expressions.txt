@@ -1,0 +1,60 @@
+================================================================================
+POWER AUTOMATE İFADELERİ (FORMÜLLERİ) - SMS2API
+================================================================================
+
+Aşağıdaki ifadeleri Power Automate içerisinde ilgili alanlara tıklayıp
+"Dinamik İçerik" -> "İfade" (Expression) sekmesinden doğrudan yapıştırabilirsiniz.
+
+--------------------------------------------------------------------------------
+1. ZAMAN DAMGASINI OKUNABİLİR TARİHE DÖNÜŞTÜRME (TÜRKİYE SAATİ: UTC+3)
+--------------------------------------------------------------------------------
+Gelen milisaniye cinsindeki Unix zaman damgasını (örn: 1711234567890) 
+"YYYY-AA-GG SS:DD:SN" formatında Türkiye yerel saatine dönüştürür:
+
+convertFromUtc(addSeconds('1970-01-01T00:00:00Z', div(triggerBody()?['timestamp'], 1000)), 'Turkey Standard Time', 'yyyy-MM-dd HH:mm:ss')
+
+Alternatif basit formül:
+addHours(addSeconds('1970-01-01T00:00:00Z', div(triggerBody()?['timestamp'], 1000)), 3, 'yyyy-MM-dd HH:mm:ss')
+
+
+--------------------------------------------------------------------------------
+2. ZAMAN DAMGASINI UTC OLARAK ALMA
+--------------------------------------------------------------------------------
+addSeconds('1970-01-01T00:00:00Z', div(triggerBody()?['timestamp'], 1000), 'yyyy-MM-dd HH:mm:ss')
+
+
+--------------------------------------------------------------------------------
+3. HTTP YANIT (RESPONSE) GÖVDESİ (JSON)
+--------------------------------------------------------------------------------
+Durum Kodu (Status Code): 200
+Üstbilgiler (Headers): Content-Type: application/json
+Gövde (Body):
+{
+  "status": "success",
+  "message_id": "@{triggerBody()?['message_id']}",
+  "processed_at": "@{utcNow()}"
+}
+
+
+--------------------------------------------------------------------------------
+4. GÜVENLİK KONTROLÜ (API KEY DOĞRULAMA - OPSİYONEL)
+--------------------------------------------------------------------------------
+Android uygulamasında Ayarlar -> Custom Header altına:
+Key: X-API-Key
+Value: gizli_sifreniz_123
+
+Power Automate'de "Koşul" (Condition) eylemi ekleyin:
+Sol taraf (İfade):
+triggerOutputs()['headers']?['x-api-key']
+
+Operatör:
+eşittir (is equal to)
+
+Sağ taraf:
+gizli_sifreniz_123
+
+Eğer Yanlış ise (If No):
+HTTP Yanıt (Response) döndürün:
+Status Code: 401
+Body: {"error": "Unauthorized - Invalid API Key"}
+Ve ardından "Sonlandır" (Terminate - Failed) adımı koyun.

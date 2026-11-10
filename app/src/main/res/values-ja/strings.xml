@@ -1,0 +1,147 @@
+<resources>
+    <!-- App & Service Core -->
+    <string name="app_name">SMS2API</string>
+    <string name="channel_name">SMS転送サービス</string>
+    <string name="channel_desc">受信したSMSメッセージを取得してREST APIに転送する常駐バックグラウンドサービス</string>
+    <string name="service_active_title">SMS2API 稼働中</string>
+    <string name="service_active_desc">受信SMSを監視しAPIに転送しています</string>
+    <string name="service_active_status">サービス稼働中</string>
+    <string name="service_stopped_status">サービス停止中</string>
+    <string name="service_active_sub">バックグラウンドSMSキャプチャが有効です</string>
+    <string name="service_stopped_sub">自動バックグラウンドキャプチャを開始するにはオンにしてください</string>
+    <string name="stop_service">サービス停止</string>
+    <string name="service_messages_queued">%1$s • %2$d件が待機列にあります</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">ダッシュボード</string>
+    <string name="nav_logs">ログと待機列</string>
+    <string name="nav_logs_short">ログ</string>
+    <string name="nav_settings">構成</string>
+    <string name="nav_settings_short">設定</string>
+    <string name="title_format">SMS2API • %1$s</string>
+
+    <!-- Dashboard Screen -->
+    <string name="section_metrics">待機列と配信メトリクス</string>
+    <string name="metric_matched">フィルター一致</string>
+    <string name="metric_skipped">フィルター対象外</string>
+    <string name="metric_delivered">配信完了</string>
+    <string name="metric_pending">保留中</string>
+    <string name="metric_failed">失敗</string>
+    <string name="metric_total">取得合計</string>
+    <string name="section_actions">操作アクション</string>
+    <string name="action_sync_all_past">過去のSMSを一括同期 (一括インポート)</string>
+    <string name="action_scanning_inbox">受信トレイのSMSをスキャン中…</string>
+    <string name="action_resend_all">すべて再送信</string>
+    <string name="action_send_pending">保留中を送信</string>
+    <string name="action_send_failed">失敗分を再試行</string>
+    <string name="action_test_api">APIテスト</string>
+    <string name="action_testing">テスト中…</string>
+    <string name="battery_opt_title">バッテリー最適化が有効です</string>
+    <string name="battery_opt_desc">SMS転送が中断されないよう、バックグラウンドでの実行を許可してください。</string>
+    <string name="battery_opt_allow">許可する</string>
+
+    <!-- Dashboard Dialogs -->
+    <string name="dialog_btn_yes">はい</string>
+    <string name="dialog_btn_no">いいえ</string>
+    <string name="dialog_sync_title">過去の全SMSを同期</string>
+    <string name="dialog_sync_desc">デバイスの受信トレイをスキャンし、フィルター条件に一致する過去のSMSをすべて待機列にインポートします。</string>
+    <string name="dialog_resend_all_title">すべての記録を再送信</string>
+    <string name="dialog_resend_all_desc">すべてのSMS記録（配信完了、保留中、失敗）を保留中に戻し、再送信キューに追加します。</string>
+    <string name="dialog_send_pending_title">保留中のキューを送信</string>
+    <string name="dialog_send_pending_desc">キュー内にあるすべての保留中SMSを直ちに送信するようバックグラウンドワーカーをトリガーします。</string>
+    <string name="dialog_send_failed_title">失敗したメッセージを再送信</string>
+    <string name="dialog_send_failed_desc">失敗したすべてのSMS配信試行を保留中に戻し、再試行スケジュールに設定します。</string>
+    <string name="dialog_test_api_title">API接続テスト</string>
+    <string name="dialog_test_api_desc">設定されたWebhookエンドポイントURLにテストPingリクエストを送信して接続を確認します。</string>
+
+    <!-- Logs Screen -->
+    <string name="search_placeholder">送信元、本文、ハッシュで検索…</string>
+    <string name="clear">クリア</string>
+    <string name="filter_all">すべて (%1$d)</string>
+    <string name="filter_matched">一致 (%1$d)</string>
+    <string name="filter_skipped">対象外 (%1$d)</string>
+    <string name="filter_success">成功 (%1$d)</string>
+    <string name="filter_pending">保留中 (%1$d)</string>
+    <string name="filter_failed">失敗 (%1$d)</string>
+    <string name="empty_logs_filtered">フィルター条件に一致するSMS記録はありません。</string>
+    <string name="empty_logs_initial">まだ取得されたSMSメッセージはありません。</string>
+    <string name="dialog_send_record_title">APIに送信</string>
+    <string name="dialog_send_record_desc">このメッセージ（送信元: %1$s）をAPIに送信しますか？</string>
+    <string name="badge_skipped">スキップ</string>
+    <string name="badge_http">HTTP %1$d</string>
+    <string name="badge_sent_attempts">送信回数: %1$d回</string>
+    <string name="action_send_to_api">APIに送信</string>
+    <string name="copy_message_id">IDをコピー</string>
+    <string name="toast_copied">%1$s をクリップボードにコピーしました</string>
+    <string name="label_message_id">メッセージID</string>
+
+    <!-- Settings Screen -->
+    <string name="about_app_title">SMS2API 転送ツール</string>
+    <string name="about_app_desc">SMSからREST APIへの自動ブリッジ。受信したメッセージを即座にキャプチャし、安全に転送します。</string>
+    <string name="section_target_auth">送信先と認証</string>
+    <string name="field_webhook_url">WebhookエンドポイントURL</string>
+    <string name="field_webhook_placeholder">https://api.yourdomain.com/v1/sms/webhook</string>
+    <string name="field_auth_method">認証方式</string>
+    <string name="auth_none">なし</string>
+    <string name="auth_basic">基本認証 (Basic Auth)</string>
+    <string name="auth_bearer">Bearerトークン</string>
+    <string name="auth_custom">カスタムヘッダー (Custom Header)</string>
+    <string name="btn_change">変更</string>
+    <string name="btn_test_connection">接続テスト</string>
+    <string name="btn_save_config">設定を保存</string>
+    <string name="section_filtering_rules">SMSフィルタリングルール</string>
+    <string name="field_sender_filter">送信元フィルター</string>
+    <string name="all_senders_default">すべての送信元 (デフォルト)</string>
+    <string name="dialog_select_senders">送信元を選択</string>
+    <string name="search_senders_placeholder">送信元を検索または入力…</string>
+    <string name="action_add_sender">送信元 \"%1$s\" を追加</string>
+    <string name="btn_done">完了</string>
+    <string name="field_keyword_filter">キーワードフィルター (任意)</string>
+    <string name="keyword_placeholder">すべての本文に一致させる場合は空欄</string>
+    <string name="section_reliability">信頼性とOSバックグラウンド維持</string>
+    <string name="setting_autostart_title">端末起動時の自動起動</string>
+    <string name="setting_autostart_desc">デバイス再起動後にサービスを自動再開します。</string>
+    <string name="setting_sync_title">15分ごとのWorkManager同期</string>
+    <string name="setting_sync_desc">保留中レコード用の定期的なフォールバックワーカー。</string>
+    <string name="setting_battery_title">バッテリー最適化</string>
+    <string name="battery_exempted">除外済み (最適)</string>
+    <string name="battery_not_exempted">未除外 (中断される可能性があります)</string>
+    <string name="btn_configure">設定する</string>
+    <string name="battery_completed">設定完了</string>
+    <string name="section_service_status">サービス状態</string>
+    <string name="section_language">アプリの言語 / Language</string>
+    <string name="language_selector_title">表示言語</string>
+    <string name="language_selector_sub">アプリの表示言語を選択します</string>
+    <string name="system_default_language">システムのデフォルト</string>
+    <string name="dialog_tls_title">Webhookのセキュリティと暗号化</string>
+    <string name="dialog_tls_desc">• HTTPSエンドポイントには厳格なTLS 1.2+が必須です。\n• 認証情報やトークンはAndroid Keystore (AES256-GCM) で安全に暗号化されます。</string>
+    <string name="btn_got_it">了解</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="dialog_auth_basic_title">Basic Authの設定</string>
+    <string name="dialog_auth_bearer_title">Bearerトークンの設定</string>
+    <string name="dialog_auth_custom_title">カスタムヘッダーの設定</string>
+    <string name="dialog_auth_default_title">認証の設定</string>
+    <string name="field_username">ユーザー名</string>
+    <string name="field_password">パスワード</string>
+    <string name="field_leave_blank_clear">クリアする場合は空欄</string>
+    <string name="field_bearer_token">Bearerトークン</string>
+    <string name="label_custom_headers_array">カスタムヘッダー一覧:</string>
+    <string name="btn_add_header">ヘッダーを追加</string>
+    <string name="auth_no_config_needed">この認証方式には追加設定は不要です。</string>
+
+    <!-- Feedback & Messages -->
+    <string name="snack_service_started">SMS2APIサービスがフォアグラウンドで開始されました</string>
+    <string name="snack_service_stopped">SMS2APIサービスが停止しました</string>
+    <string name="snack_queue_triggered">待機列の配信が開始されました</string>
+    <string name="snack_delivered_success">配信に成功しました</string>
+    <string name="snack_delivered_failed">配信失敗、キューに保持されます</string>
+    <string name="snack_retry_failed_queued">%1$d件の失敗メッセージが再試行キューに追加されました</string>
+    <string name="snack_queued_all_resend">すべての記録が再送信キューに追加されました</string>
+    <string name="snack_cleared_delivered">配信済みの全記録をクリアしました</string>
+    <string name="snack_cleared_all">ローカルの全記録をクリアしました</string>
+    <string name="snack_historical_completed">過去SMSの同期完了: スキャン: %1$d | 一致: %2$d | キュー追加: %3$d</string>
+    <string name="snack_historical_failed">受信トレイのインポートに失敗しました: %1$s</string>
+    <string name="snack_config_saved">送信先と認証設定を保存しました</string>
+    <string name="conn_test_success">成功！エンドポイントに接続可能 (HTTP %1$d)</string>
+    <string name="conn_test_failed">失敗: %1$s</string>
+</resources>
